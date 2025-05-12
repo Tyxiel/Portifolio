@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>My Portfolio</title>
+    <link rel="preload" href="style.css" as="style" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="https://avatars.githubusercontent.com/u/128870773?v=4"
+    />
+    <meta
+      name="description"
+      content="A portfolio for a freeCodeCamp project."
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const icon = document.getElementById("dropdown-icon");
+        const menu = document.getElementById("dropdown-menu");
+        const container = document.querySelector(".dropdown-container");
+
+        icon.addEventListener("click", function (event) {
+          event.stopPropagation();
+          container.classList.toggle("open");
+        });
+
+        document.addEventListener("click", function (event) {
+          if (!container.contains(event.target)) {
+            container.classList.remove("open");
+          }
+        });
+
+        const asideLink = document.querySelector("aside a");
+        const asideIcon = asideLink.querySelector("i");
+
+        asideLink.addEventListener("mouseenter", () => {
+          if (asideIcon.classList.contains("bxs-folder")) {
+            asideIcon.classList.replace("bxs-folder", "bxs-folder-open");
+          }
+        });
+
+        asideLink.addEventListener("mouseleave", () => {
+          if (asideIcon.classList.contains("bxs-folder-open")) {
+            asideIcon.classList.replace("bxs-folder-open", "bxs-folder");
+          }
+        });
+
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        navLinks.forEach((navLink) => {
+          const navIcon = navLink.querySelector("i");
+
+          navLink.addEventListener("mouseenter", () => {
+            if (navIcon.classList.contains("bx-home-alt-2")) {
+              navIcon.classList.replace("bx-home-alt-2", "bxs-home-alt-2");
+            } else if (navIcon.classList.contains("bx-briefcase")) {
+              navIcon.classList.replace("bx-briefcase", "bxs-briefcase");
+            } else if (navIcon.classList.contains("bx-envelope")) {
+              navIcon.classList.replace("bx-envelope", "bxs-envelope");
+            }
+          });
+
+          navLink.addEventListener("mouseleave", () => {
+            if (navIcon.classList.contains("bxs-home-alt-2")) {
+              navIcon.classList.replace("bxs-home-alt-2", "bx-home-alt-2");
+            } else if (navIcon.classList.contains("bxs-briefcase")) {
+              navIcon.classList.replace("bxs-briefcase", "bx-briefcase");
+            } else if (navIcon.classList.contains("bxs-envelope")) {
+              navIcon.classList.replace("bxs-envelope", "bx-envelope");
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <div class="dropdown-container">
+          <i class="bx bx-chevron-right dropdown-icon" id="dropdown-icon"></i>
+          <ul class="dropdown" id="dropdown-menu">
+            <li class="nav-item">
+              <a class="nav-link active" href="#welcome-section">
+                <i class="bx bx-home-alt-2"></i>
+                <span>Welcome!</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">
+                <i class="bx bx-briefcase"></i>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">
+                <i class="bx bx-envelope"></i>
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <main>
+        <section id="welcome-section">
+          <h1>
+            Howdy! I'm
+            <a
+              href="https://github.com/tyxiel"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="profile-link"
+              >Tyxiel.</a
+            >
+          </h1>
+          <h2>Front-end & Database Developer</h2>
+        </section>
+        <section aria-labelledby=".projects-main-title" id="projects">
+          <h1 class="projects-main-title">Projects! Things made by me</h1>
+          <main>
+            <a
+              href="https://tyxiel.github.io/Simple-Weather-App/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/Qn5cWvc/image.png"
+                alt="A weather app with the most important info"
+              />
+              <p class="project-tile" aria-hidden="true">Simple Weather App</p>
+            </a>
+            <a
+              href="https://gabrielbehling.github.io/Weather-App/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/k93dWR9/image.png"
+                alt="A weather app with almost everything"
+              />
+              <p class="project-tile" aria-hidden="true">
+                Advanced Weather App
+              </p>
+            </a>
+            <a
+              href="https://tyxiel.github.io/appViaCep2/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/s3sYKFz/image.png"
+                alt="A Brazilian CEP search app"
+              />
+              <p class="project-tile" aria-hidden="true">
+                Brazilian CEP Search
+              </p>
+            </a>
+            <a
+              href="https://tyxiel.github.io/CNPJSearchApp/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/BZKbf2F/image.png"
+                alt="A Brazilian CNPJ search app"
+              />
+              <p class="project-tile" aria-hidden="true">
+                Brazilian CNPJ Search
+              </p>
+            </a>
+            <a
+              href="https://tyxiel.github.io/Product-Landing-Page/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/2hS2brm/image.png"
+                alt="A simple product landing page"
+              />
+              <p class="project-tile" aria-hidden="true">
+                Product Landing Page
+              </p>
+            </a>
+            <a
+              href="https://tyxiel.github.io/Technical-Doc/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="https://i.ibb.co/2YJPGNS/image.png"
+                alt="A simple golang technical document"
+              />
+              <p class="project-tile" aria-hidden="true">
+                Simple Golang Technical Doc
+              </p>
+            </a>
+          </main>
+          <aside class="projects-aside">
+            <a
+              href="https://github.com/tyxiel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="bx bxs-folder"></i>
+              <h1>All repositories</h1>
+            </a>
+          </aside>
+        </section>
+        <section aria-labelledby="#contact-title" id="contact">
+          <h1 id="contact-title" aria-hidden="true">Contact Me</h1>
+          <main class="contact-container">
+            <article class="contact-info">
+              <h2>Get in Touch</h2>
+              <p>
+                If you have any questions or just want to connect, feel free to
+                reach out through any of the methods below.
+              </p>
+              <section class="contact-details">
+                  <a href="mailto:your.email@example.com"
+                    ><i class="bx bx-mail-send"></i></a
+                  >
+                  <a
+                    href="https://github.com/tyxiel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class='bx bxl-github' ></i></a
+                  >
+                  <a
+                    href="https://linkedin.com/in/tyxiel"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    ><i class="bx bxl-linkedin"></i></a
+                  >
+              </section>
+            </article>
+          </main>
+        </section>
+      </main>
+    </header>
+  </body>
+</html>
