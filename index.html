@@ -4,60 +4,29 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>Meu Portifolio</title>
-    <link rel="preload" href="style.css" as="style" />
+    <title>Meu Portifólio - Tyxiel</title>
+
+    <link rel="preload" href="styles.css" as="style" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link
-      rel="apple-touch-icon"
-      sizes="57x57"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-..."
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <link
-      rel="apple-touch-icon"
-      sizes="60x60"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
     />
-    <link
-      rel="apple-touch-icon"
-      sizes="72x72"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="114x114"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="120x120"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="144x144"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="152x152"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
+
     <link
       rel="icon"
       type="image/png"
@@ -67,96 +36,46 @@
     <link
       rel="icon"
       type="image/png"
-      sizes="96x96"
-      href="https://avatars.githubusercontent.com/u/128870773?v=4"
-    />
-    <link
-      rel="icon"
-      type="image/png"
       sizes="16x16"
       href="https://avatars.githubusercontent.com/u/128870773?v=4"
     />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta
-      name="msapplication-TileImage"
-      content="https://avatars.githubusercontent.com/u/128870773?v=4"
+    <link
+      rel="apple-touch-icon"
+      href="https://avatars.githubusercontent.com/u/128870773?v=4"
     />
+
     <meta
       name="description"
-      content="Meu portifólio profissional."
+      content="Portifólio profissional de Tyxiel, desenvolvedor Front-end & Back-end."
     />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const icon = document.getElementById("dropdown-icon");
-        const menu = document.getElementById("dropdown-menu");
-        const container = document.querySelector(".dropdown-container");
+    <meta name="author" content="Tyxiel" />
 
-        icon.addEventListener("click", function (event) {
-          event.stopPropagation();
-          container.classList.toggle("open");
-        });
-
-        document.addEventListener("click", function (event) {
-          if (!container.contains(event.target)) {
-            container.classList.remove("open");
-          }
-        });
-
-        const asideLink = document.querySelector("aside a");
-        const asideIcon = asideLink.querySelector("i");
-
-        asideLink.addEventListener("mouseenter", () => {
-          if (asideIcon.classList.contains("bxs-folder")) {
-            asideIcon.classList.replace("bxs-folder", "bxs-folder-open");
-          }
-        });
-
-        asideLink.addEventListener("mouseleave", () => {
-          if (asideIcon.classList.contains("bxs-folder-open")) {
-            asideIcon.classList.replace("bxs-folder-open", "bxs-folder");
-          }
-        });
-
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        navLinks.forEach((navLink) => {
-          const navIcon = navLink.querySelector("i");
-
-          navLink.addEventListener("mouseenter", () => {
-            if (navIcon.classList.contains("bx-home-alt-2")) {
-              navIcon.classList.replace("bx-home-alt-2", "bxs-home-alt-2");
-            } else if (navIcon.classList.contains("bx-briefcase")) {
-              navIcon.classList.replace("bx-briefcase", "bxs-briefcase");
-            } else if (navIcon.classList.contains("bx-envelope")) {
-              navIcon.classList.replace("bx-envelope", "bxs-envelope");
-            }
-          });
-
-          navLink.addEventListener("mouseleave", () => {
-            if (navIcon.classList.contains("bxs-home-alt-2")) {
-              navIcon.classList.replace("bxs-home-alt-2", "bx-home-alt-2");
-            } else if (navIcon.classList.contains("bxs-briefcase")) {
-              navIcon.classList.replace("bxs-briefcase", "bx-briefcase");
-            } else if (navIcon.classList.contains("bxs-envelope")) {
-              navIcon.classList.replace("bxs-envelope", "bx-envelope");
-            }
-          });
-        });
-      });
-    </script>
+    <script defer src="scripts.js"></script>
   </head>
   <body>
     <header>
       <nav id="navbar">
-        <div class="dropdown-container">
-          <i class="bx bx-chevron-right dropdown-icon" id="dropdown-icon"></i>
-          <ul class="dropdown" id="dropdown-menu">
+        <div class="navbar-container">
+          <div class="logo">
+            <a href="#welcome-section">
+              <img
+                src="https://avatars.githubusercontent.com/u/128870773?v=4"
+                alt="Logo - Meu Avatar"
+              />
+            </a>
+            <a
+              href="https://github.com/tyxiel"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="logo-text"
+            >
+              Tyxiel
+            </a>
+          </div>
+
+          <ul class="nav-menu">
             <li class="nav-item">
-              <a class="nav-link active" href="#welcome-section">
+              <a class="nav-link" href="#welcome-section">
                 <i class="bx bx-home-alt-2"></i>
                 <span>Bem-vindo!</span>
               </a>
@@ -168,162 +87,424 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#skills">
+                <i class="bx bx-code-alt"></i>
+                <span>Habilidades</span>
+              </a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#contact">
                 <i class="bx bx-envelope"></i>
                 <span>Contato</span>
               </a>
             </li>
           </ul>
+
+          <ul class="navbar-social">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="SEU_LINK_DO_YOUTUBE"
+                rel="nofollow"
+                target="_blank"
+                aria-label="YouTube"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="SEU_LINK_DO_FACEBOOK"
+                rel="nofollow"
+                target="_blank"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="SEU_LINK_DO_TWITTER"
+                rel="nofollow"
+                target="_blank"
+                aria-label="Twitter"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/tyxiel"
+                rel="nofollow"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </nav>
-      <main>
-        <section id="welcome-section">
-          <h1>
+    </header>
+
+    <main>
+      <section id="welcome-section">
+        <div class="shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
+        </div>
+        <div class="content">
+          <h1 class="main-title">
             Olá! Eu sou
             <a
               href="https://github.com/tyxiel"
               target="_blank"
               rel="noopener noreferrer"
               id="profile-link"
-              >Tyxiel.</a
-            >
+              ><span id="highlight-name">Tyxiel</span></a
+            >.
           </h1>
-          <h2>Desenvolvedor Front-end & Back-end</h2>
-        </section>
-        <section aria-labelledby=".projects-main-title" id="projects">
-          <h1 class="projects-main-title">Projetos! Feitos por mim</h1>
-          <main>
-            <a
-              href="https://tyxiel.github.io/Simple-Weather-App/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+          <h2 class="sub-content">Desenvolvedor Front-end & Back-end</h2>
+        </div>
+      </section>
+
+      <section aria-labelledby="projects-main-title" id="projects">
+        <h1 id="projects-main-title" class="section-title">
+          Projetos Recentes
+        </h1>
+        <div class="projects-grid">
+          <a
+            href="https://tyxiel.github.io/Simple-Weather-App/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
               <img
                 src="https://i.ibb.co/Qn5cWvc/image.png"
-                alt="A weather app with the most important info"
+                alt="Captura de tela do App de Clima Simples"
+                loading="lazy"
               />
-              <p class="project-tile" aria-hidden="true">App de Clima Simples</p>
-            </a>
-            <a
-              href="https://gabrielbehling.github.io/Weather-App/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <div class="project-info">
+                <h3 class="project-title">App de Clima Simples</h3>
+                <p class="project-description">
+                  Um aplicativo web que busca e exibe as condições atuais do
+                  clima para uma cidade digitada pelo usuário, utilizando uma
+                  API de clima pública.
+                </p>
+                <div class="project-techs">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>API REST</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://tyxiel.github.io/Simple-Weather-App/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
+              <img
+                src="https://i.ibb.co/Qn5cWvc/image.png"
+                alt="Captura de tela do App de Clima Simples (Exemplo 2)"
+                loading="lazy"
+              />
+              <div class="project-info">
+                <h3 class="project-title">App de Clima Simples (Exemplo 2)</h3>
+                <p class="project-description">
+                  Outro exemplo de aplicativo de clima, talvez com foco em um
+                  layout diferente ou funcionalidades adicionais.
+                </p>
+                <div class="project-techs">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://gabrielbehling.github.io/Weather-App/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
               <img
                 src="https://i.ibb.co/k93dWR9/image.png"
-                alt="A weather app with almost everything"
+                alt="Captura de tela do App de Clima Antigo"
+                loading="lazy"
               />
-              <p class="project-tile" aria-hidden="true">
-                App de Clima Antigo
-              </p>
-            </a>
-            <a
-              href="https://tyxiel.github.io/appViaCep2/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <div class="project-info">
+                <h3 class="project-title">App de Clima Antigo</h3>
+                <p class="project-description">
+                  Versão anterior de um app de clima, explorando diferentes
+                  abordagens de design e funcionalidades.
+                </p>
+                <div class="project-techs">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>APIs</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://tyxiel.github.io/appViaCep2/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
               <img
                 src="https://i.ibb.co/s3sYKFz/image.png"
-                alt="A Brazilian CEP search app"
+                alt="Captura de tela do Buscador de CEP"
+                loading="lazy"
               />
-              <p class="project-tile" aria-hidden="true">
-                Buscador de CEP
-              </p>
-            </a>
-            <a
-              href="https://tyxiel.github.io/CNPJSearchApp/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <div class="project-info">
+                <h3 class="project-title">Buscador de CEP</h3>
+                <p class="project-description">
+                  Ferramenta para buscar informações de endereço a partir de um
+                  CEP brasileiro, utilizando a API ViaCEP.
+                </p>
+                <div class="project-techs">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>ViaCEP API</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://tyxiel.github.io/CNPJSearchApp/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
               <img
                 src="https://i.ibb.co/BZKbf2F/image.png"
-                alt="A Brazilian CNPJ search app"
+                alt="Captura de tela do Buscador de CNPJ"
+                loading="lazy"
               />
-              <p class="project-tile" aria-hidden="true">
-                Buscador de CNPJ
-              </p>
-            </a>
-            <a
-              href="https://tyxiel.github.io/Product-Landing-Page/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+              <div class="project-info">
+                <h3 class="project-title">Buscador de CNPJ</h3>
+                <p class="project-description">
+                  Aplicativo web para consultar dados públicos de empresas
+                  brasileiras através do CNPJ.
+                </p>
+                <div class="project-techs">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>API Pública</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a
+            href="https://tyxiel.github.io/Product-Landing-Page/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
               <img
                 src="https://i.ibb.co/2hS2brm/image.png"
-                alt="A simple product landing page"
+                alt="Captura de tela da Product Landing Page"
+                loading="lazy"
               />
-              <p class="project-tile" aria-hidden="true">
-                Product Landing Page
-              </p>
-            </a>
-            <a
-              href="https://tyxiel.github.io/Technical-Doc/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="https://i.ibb.co/2YJPGNS/image.png"
-                alt="A simple golang technical document"
-              />
-              <p class="project-tile" aria-hidden="true">
-                Documentação Simples de Go
-              </p>
-            </a>
-          </main>
+              <div class="project-info">
+                <h3 class="project-title">Product Landing Page</h3>
+                <p class="project-description">
+                  Exemplo de página de destino (landing page) para um produto
+                  fictício, focando no design responsivo e layout.
+                </p>
+                <div class="project-techs">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>Responsividade</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
           <a
-              href="https://tyxiel.github.io/Technical-Doc/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            href="https://tyxiel.github.io/Technical-Doc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="project-card"
+          >
+            <div class="project-content">
               <img
                 src="https://i.ibb.co/2YJPGNS/image.png"
-                alt="A simple golang technical document"
+                alt="Captura de tela da Documentação Simples de Go"
+                loading="lazy"
               />
-              <p class="project-tile" aria-hidden="true">
-                Documentação Simples de Go
-              </p>
-            </a>
-          </main>
-          <aside class="projects-aside">
-            <a
-              href="https://github.com/tyxiel"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="bx bxs-folder"></i>
-              <h1>Todos os repositórios</h1>
-            </a>
-          </aside>
-        </section>
-        <section aria-labelledby="#contact-title" id="contact">
-          <h1 id="contact-title" aria-hidden="true">Contato</h1>
-          <main class="contact-container">
-            <article class="contact-info">
-              <h2>Fale comigo</h2>
-              <p>
-                Se tiver alguma dúvida ou apenas quiser se conectar, fique à vontade para entrar em contato pelo e-mail por meio de qualquer um dos métodos abaixo.
-              </p>
-              <section class="contact-details">
-                  <a href="mailto:your.email@example.com"
-                    ><i class="bx bx-mail-send"></i></a
-                  >
-                  <a
-                    href="https://github.com/tyxiel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class='bx bxl-github' ></i></a
-                  >
-                  <a
-                    href="https://linkedin.com/in/tyxiel"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    ><i class="bx bxl-linkedin"></i></a
-                  >
-              </section>
-            </article>
-          </main>
-        </section>
-      </main>
-    </header>
+              <div class="project-info">
+                <h3 class="project-title">Documentação Simples de Go</h3>
+                <p class="project-description">
+                  Documentação técnica simples sobre a linguagem de programação
+                  Go, demonstrando estrutura e formatação para documentação web.
+                </p>
+                <div class="project-techs">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <aside class="projects-aside">
+          <a
+            href="https://github.com/tyxiel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bx bxs-folder"></i>
+            <span>Ver Todos os Repositórios</span>
+          </a>
+        </aside>
+      </section>
+
+      <section id="skills">
+        <h2 class="section-title">Minhas Habilidades</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Hard Skills - Front-end</h3>
+            <ul class="skill-list">
+              <li>HTML5</li>
+              <li>CSS3 (Flexbox, Grid)</li>
+              <li>JavaScript (ES6+)</li>
+              <li>React</li>
+              <li>Responsividade</li>
+              <li>Sass/Less (Opcional, se usar)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Hard Skills - Back-end</h3>
+            <ul class="skill-list">
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>SQL (PostgreSQL, MySQL)</li>
+              <li>APIs REST</li>
+              <li>Express.js (Opcional, se usar)</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Ferramentas & Outros</h3>
+            <ul class="skill-list">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>VS Code</li>
+              <li>Figma (Básico)</li>
+              <li>Metodologias Ágeis (Kanban, Scrum Básico)</li>
+              <li>Terminal/CLI</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <ul class="skill-list">
+              <li>Comunicação Efetiva</li>
+              <li>Trabalho em Equipe</li>
+              <li>Resolução de Problemas</li>
+              <li>Adaptabilidade</li>
+              <li>Pensamento Crítico</li>
+              <li>Gestão de Tempo</li>
+              <li>Aprendizado Contínuo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="contact-title" id="contact">
+        <h2 id="contact-title" class="section-title">Fale Comigo</h2>
+        <p class="contact-intro">
+          Se tiver alguma dúvida, oportunidade de colaboração ou apenas quiser
+          trocar uma ideia, sinta-se à vontade para entrar em contato através
+          dos métodos abaixo:
+        </p>
+        <div class="contact-methods-container">
+          <div class="contact-method-item">
+            <i class="bx bx-mail-send"></i>
+            <div class="method-info">
+              <h3>Email</h3>
+              <a href="mailto:SEU_EMAIL@example.com" class="method-link"
+                >SEU_EMAIL@example.com</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-method-item">
+            <i class="bx bxl-linkedin"></i>
+            <div class="method-info">
+              <h3>LinkedIn</h3>
+              <a
+                href="https://linkedin.com/in/SEU_PERFIL_LINKEDIN"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="method-link"
+                >linkedin.com/in/SEU_PERFIL_LINKEDIN</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-method-item">
+            <i class="bx bxl-github"></i>
+            <div class="method-info">
+              <h3>GitHub</h3>
+              <a
+                href="https://github.com/tyxiel"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="method-link"
+                >github.com/tyxiel</a
+              >
+            </div>
+          </div>
+
+          <div class="contact-method-item">
+            <i class="bx bxs-file"></i>
+            <div class="method-info">
+              <h3>Currículo</h3>
+              <a
+                href="LINK_PARA_SEU_CURRICULO"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="method-link"
+                >Download PDF</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <span id="current-year"></span> Tyxiel. Todos os direitos
+        reservados.
+      </p>
+      <p>Feito com ❤️ e Código.</p>
+    </footer>
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>
