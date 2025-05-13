@@ -1,16 +1,48 @@
+/* Cores definidas para o layout geral 
+*/
 :root {
-  --color-lightest: #f8f9fa;
-  --color-light: #e9ecef;
+  /* Cores neutras e de fundo */
+  --color-lightest: #f8f9fa; /* usado para background principal e texto em fundos escuros */
+  --color-light: #e9ecef; /* usado para fundo de projetos e categorias de skills */
   --color-lighter: #dee2e6;
-  --color-light-medium: #ced4da;
-  --color-light-dark: #adb5bd;
+  --color-light-medium: #ced4da; /* usado para texto em fundos escuros e bordas */
+  --color-light-dark: #adb5bd; /* usado para texto em fundos escuros */
+
+  /* Escalas escuras */
   --color-medium-dark: #6c757d;
-  --color-dark: #495057;
-  --color-darker: #343a40;
-  --color-darkest: #212529;
-  --color-pink: #e6beae;
+  --color-dark: #343a40; /* usado na navbar, fundo de contato e para textos sobre fundos claros */
+  --color-darker: #2c3238; /* bordas e separadores na navbar */
+  --color-darkest: #1f2427; /* fundo de cartões de projeto e rodapé */
+
+  /* Cores de destaque (mantidas dos shapes, ajuste se quiser) */
+  --color-highlight: #ff8906; /* laranja */
+  --color-secondary: #f25f4c; /* vermelho/laranja */
+  --color-tertiary: #e53170; /* rosa/roxo */
+
+  /* Cores específicas para seções */
+  --nav-text: #e0e0e0; /* texto da navbar */
+  --projects-bg: var(--color-light); /* fundo da seção de projetos */
+  --projects-card-bg: var(--color-darkest); /* fundo dos cartões de projeto */
+  --contact-bg: var(--color-dark); /* fundo da seção de contato */
+  --contact-text: var(--color-lightest); /* texto da seção de contato */
+  --footer-bg: var(--color-darkest); /* fundo do rodapé */
+  --footer-text: var(--color-light-dark); /* texto do rodapé */
+
+  /* Sombras */
+  --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.34),
+    0.4px 0.8px 1px -1.2px hsl(0deg 0% 0% / 0.34),
+    1px 2px 2.5px -2.5px hsl(0deg 0% 0% / 0.34);
+  --shadow-elevation-medium: 0.6px 1.2px 1.7px hsl(0deg 0% 0% / 0.36),
+    1.5px 3px 3.8px -1.2px hsl(0deg 0% 0% / 0.36),
+    3.1px 6.1px 7.7px -2.5px hsl(0deg 0% 0% / 0.36);
+  --shadow-elevation-high: 1px 2px 2.8px hsl(0deg 0% 0% / 0.38),
+    2.6px 5.2px 6.5px -1.2px hsl(0deg 0% 0% / 0.38),
+    6.2px 12.3px 15.5px -2.5px hsl(0deg 0% 0% / 0.38);
 }
 
+/* ==================== */
+/* Resets e Configs Base */
+/* ==================== */
 *,
 ::before,
 ::after {
@@ -29,7 +61,6 @@ html {
   html {
     scroll-behavior: auto;
   }
-
   * {
     transition: none !important;
     animation: none !important;
@@ -42,207 +73,436 @@ html {
 
 ::-webkit-scrollbar-thumb {
   background: #888;
+  border-radius: 10px;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif; /* Fonte para o corpo de texto */
   color: var(--color-dark);
   background-color: var(--color-lightest);
+  padding-top: 60px; /* Espaço para a navbar fixa */
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
 }
 
+h1,
+h2,
+h3 {
+  font-family: "Poppins", sans-serif; /* Fonte para títulos */
+  font-weight: 600; /* Peso para títulos */
+  line-height: 1.2;
+  color: var(--color-dark); /* Cor padrão para títulos (em fundos claros) */
+}
+
+/* Estilo para títulos de seção */
+.section-title {
+  text-align: center;
+  font-size: 2.5em; /* Tamanho maior para títulos de seção */
+  margin-bottom: 1.5em; /* Espaço após o título */
+  color: var(--color-dark); /* Cor padrão, ajuste para fundos escuros */
+}
+
+/* ==================== */
+/* Navbar */
+/* ==================== */
 #navbar {
   position: fixed;
+  top: 0;
   left: 0;
-  top: 10vh;
-  width: auto;
-  border-radius: 8px;
-  background-color: var(--color-dark);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--color-darker);
+  right: 0;
+  height: 60px;
+  background-color: var(--color-dark); /* Tom escuro */
+  border-bottom: 1px solid var(--color-darker);
   z-index: 1000;
+  box-shadow: var(--shadow-elevation-low); /* Sombra sutil */
 }
 
-.dropdown-container {
-  position: relative;
-}
-
-.dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: var(--color-dark);
-  border: 1px solid var(--color-darker);
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 1000;
-  padding: 8px;
-  border-radius: 8px;
-}
-
-.dropdown-icon {
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  padding: 5px;
-  font-size: 30px;
-  color: var(--color-light-dark);
-}
-
-.dropdown-container.open .dropdown {
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  opacity: 1;
-  visibility: visible;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
-.dropdown-container.open .dropdown-icon {
-  transform: rotate(90deg);
-}
-
-.dropdown-container:hover .dropdown {
-  display: flex;
-  flex-direction: column;
-  opacity: 1;
-  visibility: visible;
-}
-
-.dropdown-container:hover .dropdown-icon {
-  transform: rotate(90deg);
-}
-
-.dropdown .nav-item {
-  display: flex;
-  place-content: center;
-  padding: 7.5px 5px;
-  border-bottom: 0.5px solid var(--color-darkest);
-}
-
-.dropdown .nav-item:last-child {
-  border-bottom: none;
-}
-
-.dropdown .nav-link {
+/* Área Esquerda: Logo e Nome */
+.logo {
   display: flex;
   align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  height: 45px; /* Tamanho ideal para um visual profissional */
+  width: auto;
+  border-radius: 50%; /* Circular para combinar com o avatar */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Efeito hover na imagem do logo */
+.logo a:hover img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Estilo para o texto "Tyxiel" ao lado do logo */
+.logo-text {
   text-decoration: none;
-  color: var(--color-light-dark);
-  padding: 2.5px 5px;
-}
-
-.dropdown .nav-link i {
-  margin-right: 10px;
+  color: var(--nav-text);
   font-size: 20px;
+  font-weight: 700; /* Poppins bold */
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.dropdown .nav-link span {
-  font-size: 16px;
-  font-weight: 400;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.dropdown .nav-link:hover {
-  background-color: var(--color-darkest);
-  border-radius: 4px;
-}
-
-#welcome-section {
+/* Efeito hover para o texto "Tyxiel" */
+.logo-text:hover {
   color: var(--color-lightest);
-  background: linear-gradient(
-    135deg,
-    var(--color-darker),
-    var(--color-darkest),
-    var(--color-medium-dark)
-  );
-  text-align: center;
-  padding: 0 50px 50px;
-  height: 100vh;
-  place-content: center;
-}
-
-#welcome-section h1 {
-  font-weight: bolder;
-  font-size: 60px;
-}
-
-#welcome-section h1 #profile-link {
-  color: var(--color-lightest);
-  transition: color 0.3s ease;
-}
-
-#welcome-section h1 #profile-link:hover {
-  color: var(--color-light-dark);
   transform: translateY(-2px);
 }
 
-#welcome-section h2 {
-  font-weight: normal;
-  font-size: 30px;
-  color: var(--color-pink);
+/* Área Central: Navegação interna */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
 }
 
-#projects {
-  padding: 50px 20px;
+.nav-menu .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.nav-menu .nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--nav-text); /* Cor inicial do texto */
+  font-size: 1rem; /* Tamanho baseado em root font size */
+  font-weight: 500; /* Roboto medium */
+  padding: 8px 0; /* Padding vertical, 0 horizontal para o underline ir de ponta a ponta */
+  transition: color 0.3s ease; /* Transição apenas para a cor do texto */
+  position: relative; /* Essencial para posicionar o pseudo-elemento */
+}
+
+.nav-menu .nav-link i {
+  margin-right: 5px;
+  font-size: 1.2em; /* Tamanho do ícone relativo ao texto */
+}
+
+/* Pseudo-elemento para o underline dinâmico */
+.nav-menu .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Posição logo abaixo do texto */
+  width: 0; /* Começa com largura zero (invisível) */
+  height: 2px; /* Espessura do underline */
+  background-color: var(
+    --color-highlight
+  ); /* Cor de destaque para o underline */
+  transition: width 0.3s ease-in-out; /* Transição para a largura */
+}
+
+/* Efeito hover e estado ativo: expande o underline */
+.nav-menu .nav-link:hover::after,
+.nav-menu .nav-link.active::after {
+  width: 100%; /* Expande para 100% da largura do link */
+}
+
+/* Efeito hover e estado ativo: muda a cor do texto */
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link.active {
+  color: var(--color-lightest); /* Muda a cor do texto no hover/active */
+}
+
+/* Área Direita: Ícones das redes sociais */
+.navbar-social {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 15px; /* Espaçamento ajustado */
+}
+
+.navbar-social .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-social .nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--nav-text);
+  font-size: 1.4rem; /* Tamanho dos ícones */
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 4px; /* Padding menor para ícones */
+}
+
+.navbar-social .nav-link:hover {
+  color: var(--color-lightest);
+  transform: scale(1.1);
+}
+
+/* ==================== */
+/* Seção de Boas-Vindas */
+/* ==================== */
+#welcome-section {
+  color: var(--color-lightest);
   text-align: center;
-  background-color: var(--color-light-medium);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100vh; /* Garante que ocupe a altura total da viewport */
+  overflow: hidden; /* Esconde os shapes que saem da área */
 }
 
-#projects .projects-main-title {
-  font-weight: bolder;
-  font-size: 40px;
-  margin-bottom: 30px;
-  text-decoration: underline;
+/* Container de conteúdo centralizado */
+#welcome-section .content {
+  /* Usei #welcome-section para especificidade */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-lightest); /* Fundo branco */
+  mix-blend-mode: screen; /* Efeito de mistura com os shapes */
+  z-index: 2; /* Garante que o conteúdo esteja acima dos shapes */
 }
 
-#projects main {
+#welcome-section .main-title {
+  color: var(--color-dark); /* Cor escura sobre fundo claro */
+  margin: 0 0 10px 0; /* Espaço abaixo do título principal */
+  font-size: 3.5em; /* Tamanho maior */
+  font-weight: 700; /* Poppins bold */
+}
+
+/* Efeito de seleção de texto (opcional, mantido) */
+::selection {
+  color: #fff;
+  background: #2128bd; /* Cor de seleção */
+}
+
+#welcome-section .main-title #profile-link {
+  color: var(--color-dark); /* Cor inicial do link no título */
+  text-decoration: none; /* Remove sublinhado */
+  transition: color 0.3s ease;
+}
+
+#welcome-section .main-title #profile-link:hover {
+  color: var(--color-highlight); /* Cor de destaque no hover */
+}
+
+/* Destaque para o nome na welcome-section */
+#welcome-section #highlight-name {
+  color: var(--color-highlight); /* Cor de destaque para o nome */
+  font-weight: 700; /* Poppins bold */
+}
+
+#welcome-section .sub-content {
+  font-weight: 400; /* Roboto regular */
+  font-size: 1.5em; /* Tamanho ajustado */
+  color: var(--color-dark); /* Cor escura sobre fundo claro */
+  margin-bottom: 20px; /* Espaço abaixo */
+}
+
+/* Styles for the optional CTA button */
+/* .cta-button {
+    display: inline-block;
+    background-color: var(--color-highlight);
+    color: var(--color-darkest);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.cta-button:hover {
+    background-color: #ffaa44; // Uma variação mais clara
+    transform: translateY(-2px);
+} */
+
+/* Shapes que flutuam atrás do texto – mantidos */
+.shapes {
+  position: absolute; /* Posicionado em relação à welcome-section */
+  top: 0;
+  left: 0;
+  height: 100%; /* Ocupa a altura total da seção */
+  width: 100%; /* Ocupa a largura total da seção */
+  background: var(--color-dark);
+  overflow: hidden;
+  z-index: 1; /* Garante que fique atrás do conteúdo */
+}
+
+.shape {
+  will-change: transform;
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.8; /* Adiciona um pouco de transparência */
+}
+
+.shapes .shape-1 {
+  background: var(--color-highlight);
+  width: 650px;
+  height: 650px;
+  top: -150px; /* Ajuste a posição inicial */
+  left: -150px; /* Ajuste a posição inicial */
+}
+
+.shapes .shape-2 {
+  background: var(--color-secondary);
+  width: 440px;
+  height: 440px;
+  top: 100px; /* Ajuste a posição inicial */
+  right: -100px; /* Ajuste a posição inicial */
+}
+
+.shapes .shape-3 {
+  background: var(--color-tertiary);
+  width: 270px;
+  height: 270px;
+  bottom: -50px; /* Ajuste a posição inicial */
+  left: 50%; /* Ajuste a posição inicial */
+  transform: translateX(-50%); /* Centraliza */
+}
+
+/* Cursor customizado (opcional, se mantiver GSAP) */
+/* .cursor {
+  position: fixed;
+  background: #2128bd;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border-radius: 50%;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+} */
+
+/* ==================== */
+/* Seção de Projetos */
+/* ==================== */
+#projects {
+  padding: 80px 20px; /* Padding maior */
+  text-align: center;
+  background-color: var(--projects-bg);
+}
+
+#projects #projects-main-title {
+  /* Usei ID para especificidade */
+  font-weight: 700; /* Poppins bold */
+  font-size: 2.5em; /* Tamanho maior */
+  margin-bottom: 60px; /* Espaço maior abaixo do título */
+  color: var(--color-dark);
+}
+
+.projects-grid {
+  /* Container do grid */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  row-gap: 25px;
-  column-gap: 25px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Grid responsivo */
+  gap: 30px; /* Espaço entre os cartões */
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin: 0 auto 60px auto; /* Centraliza o grid e adiciona espaço abaixo */
 }
 
-#projects main > a img {
-  height: calc(100% - 50px);
-  object-fit: cover;
-  width: 100%;
-  border-radius: 8px;
-}
-
-#projects main > a {
-  text-decoration: none;
-  background-color: var(--color-darker);
+.project-card {
+  /* O link que envolve o cartão */
+  text-decoration: none; /* Remove sublinhado do link */
+  display: block; /* Faz o link ocupar o espaço do cartão */
+  background-color: var(--projects-card-bg);
   color: var(--color-light-medium);
-  padding: 10px;
   border-radius: 8px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden; /* Garante que a imagem e conteúdo respeitem o border-radius */
+  box-shadow: var(--shadow-elevation-low); /* Sombra inicial sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#projects main > a:hover {
-  transform: translateY(-9px) translateX(-15px);
-  box-shadow: 15px 9px var(--color-darkest);
+.project-card:hover {
+  transform: translateY(-10px); /* Levanta o cartão no hover */
+  box-shadow: var(--shadow-elevation-medium); /* Aumenta a sombra no hover */
 }
 
-#projects main .project-tile {
-  font-size: 24px;
-  padding: 10px;
+.project-content {
+  /* Div dentro do link/cartão */
+  display: flex;
+  flex-direction: column; /* Conteúdo empilhado */
+  height: 100%; /* Ocupa a altura total do cartão */
 }
 
+.project-card img {
+  width: 100%;
+  height: 200px; /* Altura fixa para as imagens */
+  object-fit: cover; /* Cobre a área sem distorcer */
+  border-bottom: 1px solid var(--color-darker); /* Separador */
+}
+
+.project-info {
+  /* Div para título, descrição e tecnologias */
+  padding: 20px; /* Padding interno */
+  text-align: left; /* Alinha o texto à esquerda */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Permite que a div cresça para preencher o espaço */
+}
+
+.project-title {
+  /* Título do projeto (h3) */
+  font-size: 1.5em; /* Tamanho ajustado */
+  font-weight: 600; /* Poppins semi-bold */
+  margin-bottom: 10px;
+  color: var(--color-lightest); /* Cor clara sobre fundo escuro do card */
+}
+
+.project-description {
+  /* Descrição do projeto */
+  font-size: 1em; /* Tamanho padrão */
+  margin-bottom: 15px;
+  color: var(--color-light-dark); /* Cor neutra */
+  flex-grow: 1; /* Permite que a descrição ocupe o máximo de espaço antes das techs */
+}
+
+.project-techs {
+  /* Container das tecnologias */
+  display: flex;
+  flex-wrap: wrap; /* Quebra linha se necessário */
+  gap: 8px; /* Espaço entre as tecnologias */
+  margin-top: 10px; /* Espaço acima */
+}
+
+.project-techs span {
+  background-color: var(--color-dark); /* Fundo escuro para as tags de tech */
+  color: var(--color-lightest); /* Texto claro */
+  font-size: 0.8em; /* Tamanho menor */
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500; /* Roboto medium */
+}
+
+/* Aside de projetos (Link para repositórios) */
 .projects-aside {
   display: inline-flex;
-  flex-direction: row;
+  align-items: center;
   gap: 10px;
-  place-content: center;
-  vertical-align: middle;
   margin-top: 30px;
   margin-bottom: 50px;
   background-color: var(--color-light-dark);
   border-radius: 8px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .projects-aside:hover {
@@ -250,84 +510,481 @@ body {
 }
 
 .projects-aside a {
-  display: inline-flex;
+  display: flex; /* Usar flexbox para alinhar ícone e texto */
+  align-items: center;
   text-decoration: none;
   color: var(--color-dark);
-  width: 100%;
-  height: 100%;
-  padding: 10px 20px;
+  padding: 12px 25px; /* Padding ajustado */
   border-radius: 8px;
+  font-size: 1.1em;
+  font-weight: 500;
 }
 
 .projects-aside a i {
-  font-size: 24px;
-  margin-right: 5px;
+  font-size: 1.3em; /* Tamanho do ícone */
+  margin-right: 8px;
 }
 
-.projects-aside a h1 {
-  display: inline-flex;
-  place-self: center;
+/* ==================== */
+/* Seção de Habilidades */
+/* ==================== */
+#skills {
+  padding: 80px 20px; /* Padding consistente */
+  background-color: var(--color-lightest); /* Fundo claro */
+  color: var(--color-dark); /* Texto escuro */
+  text-align: center; /* Centraliza o título principal */
 }
 
+#skills .section-title {
+  color: var(--color-dark); /* Cor do título sobre fundo claro */
+}
+
+.skills-container {
+  max-width: 1000px; /* Largura máxima um pouco maior para 4 colunas */
+  margin: 0 auto; /* Centraliza */
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(220px, 1fr)
+  ); /* Grid responsivo para potencialmente 4 colunas */
+  gap: 30px; /* Espaço entre categorias */
+}
+
+.skill-category {
+  background-color: var(--color-light); /* Fundo leve para a categoria */
+  padding: 25px;
+  border-radius: 8px;
+  text-align: left; /* Alinha texto dentro da categoria */
+  box-shadow: var(--shadow-elevation-low); /* Sombra */
+}
+
+.skill-category h3 {
+  font-size: 1.4em; /* Tamanho do título da categoria */
+  font-weight: 600; /* Poppins semi-bold */
+  margin-bottom: 15px;
+  color: var(--color-dark); /* Cor do título */
+  border-bottom: 1px solid var(--color-lighter); /* Separador */
+  padding-bottom: 10px;
+}
+
+.skill-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column; /* Itens da lista empilhados */
+  gap: 8px; /* Espaço entre os itens da lista */
+}
+
+.skill-list li {
+  font-size: 1em;
+  color: var(--color-dark); /* Cor do texto da habilidade */
+  /* Opcional: adicionar um marcador visual */
+  /* position: relative;
+    padding-left: 15px; */
+}
+
+/* .skill-list li::before {
+    content: '•'; // Ponto ou outro ícone
+    position: absolute;
+    left: 0;
+    color: var(--color-highlight); // Cor do marcador
+    font-weight: bold;
+} */
+
+/* ==================== */
+/* Seção de Contato */
+/* ==================== */
 #contact {
-  padding: 50px 20px;
-  background-color: var(--color-darker);
-  border-bottom: 20px solid var(--color-darkest);
-  color: var(--color-dark);
-  text-align: center;
+  padding: 80px 20px; /* Padding consistente */
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+  text-align: center; /* Centraliza o conteúdo */
+  border-bottom: 20px solid var(--color-darkest); /* Borda inferior marcante */
 }
 
 #contact #contact-title {
-  font-size: 36px;
-  margin-bottom: 30px;
-  font-weight: bolder;
-  color: var(--color-light-medium);
-}
-
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.contact-info h2 {
-  font-size: 28px;
+  /* Usei ID para especificidade */
+  font-size: 2.5em; /* Tamanho maior */
+  font-weight: 700; /* Poppins bold */
   margin-bottom: 20px;
-  font-weight: normal;
-  color: var(--color-light-medium);
+  color: var(--color-lightest); /* Cor clara sobre fundo escuro */
 }
 
-.contact-info p {
-  margin-bottom: 20px;
-  font-size: 16px;
+.contact-intro {
+  font-size: 1.1em;
   color: var(--color-light-dark);
+  margin-bottom: 40px; /* Mais espaço abaixo do intro */
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact-info .contact-details {
-  display: flex;
-  flex-direction: row;
-  place-content: center;
-  gap: 1%;
+.contact-methods-container {
+  /* Container dos métodos de contato */
+  max-width: 800px; /* Largura máxima */
+  margin: 0 auto; /* Centraliza */
+  display: grid; /* Usar grid para layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(280px, 1fr)
+  ); /* Grid responsivo, mínimo 280px por item */
+  gap: 20px; /* Espaço entre os itens */
 }
 
-.contact-info a {
-  width: 70px;
-  height: 70px;
-  font-size: 50px;
-  background-color: var(--color-darkest);
-  color: var(--color-light-dark);
-  text-decoration: none;
+.contact-method-item {
+  /* Item individual do método de contato */
+  background-color: var(
+    --color-darker
+  ); /* Fundo levemente mais claro que o fundo da seção */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex; /* Alinha ícone e info lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  gap: 15px; /* Espaço entre ícone e info */
+  text-align: left; /* Alinha texto interno à esquerda */
+  box-shadow: var(--shadow-elevation-low); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-method-item:hover {
+  transform: translateY(-5px); /* Levanta um pouco no hover */
+  box-shadow: var(--shadow-elevation-medium); /* Aumenta a sombra */
+}
+
+.contact-method-item i {
+  /* Ícone do método de contato */
+  font-size: 2em; /* Tamanho do ícone */
+  color: var(--color-highlight); /* Cor de destaque para o ícone */
+  /* Opcional: fundo circular para o ícone */
+  /* background-color: var(--color-darkest);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.method-info h3 {
+  /* Título do método (ex: Email) */
+  font-size: 1.1em;
+  font-weight: 600; /* Poppins semi-bold */
+  margin-bottom: 5px;
+  color: var(--color-lightest); /* Cor clara */
+}
+
+.method-link {
+  /* O link real de contato */
+  font-size: 1em;
+  color: var(--color-light-medium); /* Cor do link */
+  text-decoration: none; /* Remove sublinhado */
   transition: color 0.3s ease;
-  padding: 10px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-  transition: color 0.3s ease, background-color 0.3s ease;
+  word-break: break-word; /* Evita quebra de texto longo como emails */
 }
 
-.contact-info a:hover {
-  color: var(--color-light-medium);
-  background-color: var(--color-dark);
+.method-link:hover {
+  color: var(--color-lightest); /* Muda cor no hover */
+  text-decoration: underline; /* Adiciona sublinhado no hover (opcional) */
+}
+
+/* ==================== */
+/* Rodapé */
+/* ==================== */
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9em;
+}
+
+footer p {
+  margin-bottom: 8px;
+  color: inherit; /* Herda a cor do footer */
+}
+
+footer p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==================== */
+/* Responsividade */
+/* ==================== */
+@media (max-width: 768px) {
+  /* Ajustes gerais para telas menores */
+  body {
+    padding-top: 50px; /* Ajusta padding top se a navbar for menor */
+  }
+
+  #navbar {
+    height: 50px; /* Navbar um pouco menor */
+  }
+
+  .navbar-container {
+    padding: 0 15px;
+  }
+
+  .logo img {
+    height: 40px; /* Logo um pouco menor */
+  }
+
+  .logo-text {
+    font-size: 1.1em; /* Texto do logo menor */
+  }
+
+  .nav-menu {
+    gap: 15px; /* Espaço menor entre links na navbar */
+  }
+
+  .nav-menu .nav-link {
+    font-size: 0.9rem; /* Texto da navbar menor */
+    padding: 6px 0;
+  }
+
+  .nav-menu .nav-link i {
+    font-size: 1.1em; /* Ícones da navbar menores */
+    margin-right: 3px;
+  }
+
+  .navbar-social {
+    gap: 10px; /* Espaço menor entre ícones sociais */
+  }
+
+  .navbar-social .nav-link {
+    font-size: 1.2rem; /* Ícones sociais menores */
+  }
+
+  /* Welcome Section */
+  #welcome-section .main-title {
+    font-size: 2.5em; /* Título principal menor */
+  }
+
+  #welcome-section .sub-content {
+    font-size: 1.2em; /* Subtítulo menor */
+  }
+
+  /* Ajustar tamanho e posição dos shapes se mantiver */
+  .shapes .shape-1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+  }
+  .shapes .shape-2 {
+    width: 300px;
+    height: 300px;
+    top: 50px;
+    right: -50px;
+  }
+  .shapes .shape-3 {
+    width: 180px;
+    height: 180px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Seções Gerais */
+  #projects,
+  #skills,
+  #contact {
+    padding: 60px 15px; /* Padding reduzido */
+  }
+
+  .section-title {
+    font-size: 2em; /* Títulos de seção menores */
+    margin-bottom: 1em;
+  }
+
+  /* Projetos */
+  .projects-grid {
+    gap: 20px; /* Espaço menor entre cartões */
+    margin-bottom: 40px;
+  }
+
+  .project-card img {
+    height: 180px; /* Altura da imagem ajustada */
+  }
+
+  .project-info {
+    padding: 15px; /* Padding interno do cartão reduzido */
+  }
+
+  .project-title {
+    font-size: 1.3em; /* Título do projeto menor */
+  }
+
+  .project-description {
+    font-size: 0.9em; /* Descrição menor */
+  }
+
+  .project-techs span {
+    font-size: 0.75em; /* Tags de tecnologia menores */
+    padding: 3px 6px;
+  }
+
+  .projects-aside a {
+    padding: 10px 20px; /* Padding do link aside ajustado */
+    font-size: 1em;
+  }
+  .projects-aside a i {
+    font-size: 1.2em;
+  }
+
+  /* Habilidades */
+  .skills-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Colunas menores para skills */
+    gap: 20px;
+  }
+
+  .skill-category {
+    padding: 20px;
+  }
+
+  .skill-category h3 {
+    font-size: 1.2em; /* Título da categoria menor */
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+  }
+
+  .skill-list li {
+    font-size: 0.9em; /* Texto da skill menor */
+    gap: 6px;
+  }
+
+  /* Contato */
+  #contact .section-title {
+    color: var(--color-lightest); /* Garante cor clara no fundo escuro */
+  }
+
+  .contact-intro {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .contact-methods-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(250px, 1fr)
+    ); /* Ajusta colunas para o novo layout */
+    gap: 15px; /* Espaço menor entre itens */
+  }
+
+  .contact-method-item {
+    padding: 15px;
+    gap: 10px;
+  }
+
+  .contact-method-item i {
+    font-size: 1.8em; /* Ícone menor */
+  }
+
+  .method-info h3 {
+    font-size: 1em; /* Título menor */
+  }
+
+  .method-link {
+    font-size: 0.9em; /* Link menor */
+  }
+
+  /* Rodapé */
+  footer {
+    padding: 20px 15px;
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes adicionais para telas muito pequenas (celulares) */
+  #welcome-section .main-title {
+    font-size: 2em;
+  }
+
+  #welcome-section .sub-content {
+    font-size: 1em;
+  }
+
+  .section-title {
+    font-size: 1.8em;
+  }
+
+  /* Projetos */
+  .projects-grid {
+    grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+    gap: 15px;
+  }
+
+  .project-card img {
+    height: 160px; /* Altura da imagem ajustada */
+  }
+
+  .project-info {
+    padding: 10px;
+  }
+
+  .project-title {
+    font-size: 1.2em;
+  }
+
+  .project-description {
+    font-size: 0.85em;
+  }
+
+  .project-techs span {
+    font-size: 0.7em;
+    padding: 2px 5px;
+  }
+
+  /* Habilidades */
+  .skills-container {
+    grid-template-columns: 1fr; /* Uma coluna para categorias de skills */
+    gap: 15px;
+  }
+
+  .skill-category {
+    padding: 15px;
+  }
+
+  .skill-category h3 {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+  }
+
+  .skill-list li {
+    font-size: 0.85em;
+    gap: 5px;
+  }
+
+  /* Contato */
+  .contact-methods-container {
+    grid-template-columns: 1fr; /* Uma coluna para métodos de contato */
+    gap: 10px;
+  }
+
+  .contact-method-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .contact-method-item i {
+    font-size: 1.6em;
+  }
+
+  .method-info h3 {
+    font-size: 1em;
+  }
+
+  .method-link {
+    font-size: 0.9em;
+  }
+
+  /* Rodapé */
+  footer {
+    font-size: 0.7em;
+  }
 }
