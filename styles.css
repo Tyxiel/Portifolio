@@ -1,32 +1,33 @@
-/* Cores definidas para o layout geral 
-*/
+/* ==================== */
+/* Cores e Variáveis */
+/* ==================== */
 :root {
   /* Cores neutras e de fundo */
-  --color-lightest: #f8f9fa; /* usado para background principal e texto em fundos escuros */
-  --color-light: #e9ecef; /* usado para fundo de projetos e categorias de skills */
+  --color-lightest: #f8f9fa;
+  --color-light: #e9ecef;
   --color-lighter: #dee2e6;
-  --color-light-medium: #ced4da; /* usado para texto em fundos escuros e bordas */
-  --color-light-dark: #adb5bd; /* usado para texto em fundos escuros */
+  --color-light-medium: #ced4da;
+  --color-light-dark: #adb5bd;
 
   /* Escalas escuras */
   --color-medium-dark: #6c757d;
-  --color-dark: #343a40; /* usado na navbar, fundo de contato e para textos sobre fundos claros */
-  --color-darker: #2c3238; /* bordas e separadores na navbar */
-  --color-darkest: #1f2427; /* fundo de cartões de projeto e rodapé */
+  --color-dark: #343a40;
+  --color-darker: #2c3238;
+  --color-darkest: #1f2427;
 
-  /* Cores de destaque (mantidas dos shapes, ajuste se quiser) */
-  --color-highlight: #ff8906; /* laranja */
-  --color-secondary: #f25f4c; /* vermelho/laranja */
-  --color-tertiary: #e53170; /* rosa/roxo */
+  /* Cores de destaque */
+  --color-highlight: #ff8906;
+  --color-secondary: #f25f4c;
+  --color-tertiary: #e53170;
 
   /* Cores específicas para seções */
-  --nav-text: #e0e0e0; /* texto da navbar */
-  --projects-bg: var(--color-light); /* fundo da seção de projetos */
-  --projects-card-bg: var(--color-darkest); /* fundo dos cartões de projeto */
-  --contact-bg: var(--color-dark); /* fundo da seção de contato */
-  --contact-text: var(--color-lightest); /* texto da seção de contato */
-  --footer-bg: var(--color-darkest); /* fundo do rodapé */
-  --footer-text: var(--color-light-dark); /* texto do rodapé */
+  --nav-text: #e0e0e0;
+  --projects-bg: var(--color-light);
+  --projects-card-bg: var(--color-darkest);
+  --contact-bg: var(--color-dark);
+  --contact-text: var(--color-lightest);
+  --footer-bg: var(--color-darkest);
+  --footer-text: var(--color-light-dark);
 
   /* Sombras */
   --shadow-elevation-low: 0.3px 0.5px 0.7px hsl(0deg 0% 0% / 0.34),
@@ -77,29 +78,34 @@ html {
 }
 
 body {
-  font-family: "Roboto", sans-serif; /* Fonte para o corpo de texto */
+  font-family: "Roboto", sans-serif;
   color: var(--color-dark);
   background-color: var(--color-lightest);
-  padding-top: 60px; /* Espaço para a navbar fixa */
-  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  padding-top: 60px;
+  line-height: 1.6;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Poppins", sans-serif; /* Fonte para títulos */
-  font-weight: 600; /* Peso para títulos */
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   line-height: 1.2;
-  color: var(--color-dark); /* Cor padrão para títulos (em fundos claros) */
+  color: var(--color-dark);
 }
 
-/* Estilo para títulos de seção */
 .section-title {
   text-align: center;
-  font-size: 2.5em; /* Tamanho maior para títulos de seção */
-  margin-bottom: 1.5em; /* Espaço após o título */
-  color: var(--color-dark); /* Cor padrão, ajuste para fundos escuros */
+  font-size: 2.5em;
+  margin-bottom: 1.5em;
+  color: var(--color-dark);
 }
+
+::selection {
+  color: #fff;
+  background: #2128bd;
+}
+
 
 /* ==================== */
 /* Navbar */
@@ -110,10 +116,10 @@ h3 {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: var(--color-dark); /* Tom escuro */
+  background-color: var(--color-dark);
   border-bottom: 1px solid var(--color-darker);
   z-index: 1000;
-  box-shadow: var(--shadow-elevation-low); /* Sombra sutil */
+  box-shadow: var(--shadow-elevation-low);
 }
 
 .navbar-container {
@@ -126,7 +132,6 @@ h3 {
   padding: 0 20px;
 }
 
-/* Área Esquerda: Logo e Nome */
 .logo {
   display: flex;
   align-items: center;
@@ -134,34 +139,30 @@ h3 {
 }
 
 .logo img {
-  height: 45px; /* Tamanho ideal para um visual profissional */
+  height: 45px;
   width: auto;
-  border-radius: 50%; /* Circular para combinar com o avatar */
+  border-radius: 50%;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Efeito hover na imagem do logo */
 .logo a:hover img {
   transform: scale(1.05);
   opacity: 0.9;
 }
 
-/* Estilo para o texto "Tyxiel" ao lado do logo */
 .logo-text {
   text-decoration: none;
   color: var(--nav-text);
   font-size: 20px;
-  font-weight: 700; /* Poppins bold */
+  font-weight: 700;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Efeito hover para o texto "Tyxiel" */
 .logo-text:hover {
   color: var(--color-lightest);
   transform: translateY(-2px);
 }
 
-/* Área Central: Navegação interna */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -179,52 +180,46 @@ h3 {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--nav-text); /* Cor inicial do texto */
-  font-size: 1rem; /* Tamanho baseado em root font size */
-  font-weight: 500; /* Roboto medium */
-  padding: 8px 0; /* Padding vertical, 0 horizontal para o underline ir de ponta a ponta */
-  transition: color 0.3s ease; /* Transição apenas para a cor do texto */
-  position: relative; /* Essencial para posicionar o pseudo-elemento */
+  color: var(--nav-text);
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+  position: relative;
 }
 
 .nav-menu .nav-link i {
   margin-right: 5px;
-  font-size: 1.2em; /* Tamanho do ícone relativo ao texto */
+  font-size: 1.2em;
 }
 
-/* Pseudo-elemento para o underline dinâmico */
 .nav-menu .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -2px; /* Posição logo abaixo do texto */
-  width: 0; /* Começa com largura zero (invisível) */
-  height: 2px; /* Espessura do underline */
-  background-color: var(
-    --color-highlight
-  ); /* Cor de destaque para o underline */
-  transition: width 0.3s ease-in-out; /* Transição para a largura */
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-highlight);
+  transition: width 0.3s ease-in-out;
 }
 
-/* Efeito hover e estado ativo: expande o underline */
 .nav-menu .nav-link:hover::after,
 .nav-menu .nav-link.active::after {
-  width: 100%; /* Expande para 100% da largura do link */
+  width: 100%;
 }
 
-/* Efeito hover e estado ativo: muda a cor do texto */
 .nav-menu .nav-link:hover,
 .nav-menu .nav-link.active {
-  color: var(--color-lightest); /* Muda a cor do texto no hover/active */
+  color: var(--color-lightest);
 }
 
-/* Área Direita: Ícones das redes sociais */
 .navbar-social {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 15px; /* Espaçamento ajustado */
+  gap: 15px;
 }
 
 .navbar-social .nav-item {
@@ -237,15 +232,128 @@ h3 {
   align-items: center;
   text-decoration: none;
   color: var(--nav-text);
-  font-size: 1.4rem; /* Tamanho dos ícones */
+  font-size: 1.4rem;
   transition: color 0.3s ease, transform 0.3s ease;
-  padding: 4px; /* Padding menor para ícones */
+  padding: 4px;
 }
 
 .navbar-social .nav-link:hover {
   color: var(--color-lightest);
   transform: scale(1.1);
 }
+
+/* Navbar Mobile */
+.nav-menu,
+.navbar-social {
+    display: none;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    font-size: 1.8em;
+    color: var(--nav-text);
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 1001;
+}
+
+.hamburger-menu:hover {
+    color: var(--color-lightest);
+    transform: scale(1.1);
+}
+
+.hamburger-menu.open {
+    transform: rotate(90deg);
+}
+
+.sub-navigation {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--color-darker);
+    box-shadow: var(--shadow-elevation-medium);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.sub-navigation.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.sub-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sub-navigation li {
+    border-bottom: 1px solid var(--color-dark);
+}
+
+.sub-navigation li:last-child {
+    border-bottom: none;
+}
+
+.sub-navigation a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--nav-text);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sub-navigation a i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.sub-navigation a:hover {
+    background-color: var(--color-dark);
+    color: var(--color-lightest);
+}
+
+.sub-navigation .sub-nav-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 20px 10px 20px;
+    border-top: 1px solid var(--color-dark);
+    border-bottom: none;
+    margin-top: 10px;
+}
+
+.sub-navigation .sub-nav-social-links a {
+    padding: 0;
+    font-size: 1.5em;
+    color: var(--color-light-dark);
+}
+
+.sub-navigation .sub-nav-social-links a:hover {
+    background-color: transparent;
+    color: var(--color-lightest);
+    transform: scale(1.1);
+}
+
 
 /* ==================== */
 /* Seção de Boas-Vindas */
@@ -258,13 +366,11 @@ h3 {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 100vh; /* Garante que ocupe a altura total da viewport */
-  overflow: hidden; /* Esconde os shapes que saem da área */
+  height: 100vh;
+  overflow: hidden;
 }
 
-/* Container de conteúdo centralizado */
 #welcome-section .content {
-  /* Usei #welcome-section para especificidade */
   position: absolute;
   top: 0;
   left: 0;
@@ -274,226 +380,176 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--color-lightest); /* Fundo branco */
-  mix-blend-mode: screen; /* Efeito de mistura com os shapes */
-  z-index: 2; /* Garante que o conteúdo esteja acima dos shapes */
+  background: var(--color-lightest);
+  mix-blend-mode: screen;
+  z-index: 2;
 }
 
 #welcome-section .main-title {
-  color: var(--color-dark); /* Cor escura sobre fundo claro */
-  margin: 0 0 10px 0; /* Espaço abaixo do título principal */
-  font-size: 3.5em; /* Tamanho maior */
-  font-weight: 700; /* Poppins bold */
-}
-
-/* Efeito de seleção de texto (opcional, mantido) */
-::selection {
-  color: #fff;
-  background: #2128bd; /* Cor de seleção */
+  color: var(--color-dark);
+  margin: 0 0 10px 0;
+  font-size: 3.5em;
+  font-weight: 700;
 }
 
 #welcome-section .main-title #profile-link {
-  color: var(--color-dark); /* Cor inicial do link no título */
-  text-decoration: none; /* Remove sublinhado */
+  color: var(--color-dark);
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
 #welcome-section .main-title #profile-link:hover {
-  color: var(--color-highlight); /* Cor de destaque no hover */
+  color: var(--color-highlight);
 }
 
-/* Destaque para o nome na welcome-section */
 #welcome-section #highlight-name {
-  color: var(--color-highlight); /* Cor de destaque para o nome */
-  font-weight: 700; /* Poppins bold */
+  color: var(--color-highlight);
+  font-weight: 700;
 }
 
 #welcome-section .sub-content {
-  font-weight: 400; /* Roboto regular */
-  font-size: 1.5em; /* Tamanho ajustado */
-  color: var(--color-dark); /* Cor escura sobre fundo claro */
-  margin-bottom: 20px; /* Espaço abaixo */
+  font-weight: 400;
+  font-size: 1.5em;
+  color: var(--color-dark);
+  margin-bottom: 20px;
 }
 
-/* Styles for the optional CTA button */
-/* .cta-button {
-    display: inline-block;
-    background-color: var(--color-highlight);
-    color: var(--color-darkest);
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.cta-button:hover {
-    background-color: #ffaa44; // Uma variação mais clara
-    transform: translateY(-2px);
-} */
-
-/* Shapes que flutuam atrás do texto – mantidos */
 .shapes {
-  position: absolute; /* Posicionado em relação à welcome-section */
+  position: absolute;
   top: 0;
   left: 0;
-  height: 100%; /* Ocupa a altura total da seção */
-  width: 100%; /* Ocupa a largura total da seção */
+  height: 100%;
+  width: 100%;
   background: var(--color-dark);
   overflow: hidden;
-  z-index: 1; /* Garante que fique atrás do conteúdo */
+  z-index: 1;
 }
 
 .shape {
   will-change: transform;
   position: absolute;
   border-radius: 50%;
-  opacity: 0.8; /* Adiciona um pouco de transparência */
+  opacity: 0.8;
 }
 
 .shapes .shape-1 {
   background: var(--color-highlight);
   width: 650px;
   height: 650px;
-  top: -150px; /* Ajuste a posição inicial */
-  left: -150px; /* Ajuste a posição inicial */
+  top: -150px;
+  left: -150px;
 }
 
 .shapes .shape-2 {
   background: var(--color-secondary);
   width: 440px;
   height: 440px;
-  top: 100px; /* Ajuste a posição inicial */
-  right: -100px; /* Ajuste a posição inicial */
+  top: 100px;
+  right: -100px;
 }
 
 .shapes .shape-3 {
   background: var(--color-tertiary);
   width: 270px;
   height: 270px;
-  bottom: -50px; /* Ajuste a posição inicial */
-  left: 50%; /* Ajuste a posição inicial */
-  transform: translateX(-50%); /* Centraliza */
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-/* Cursor customizado (opcional, se mantiver GSAP) */
-/* .cursor {
-  position: fixed;
-  background: #2128bd;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border-radius: 50%;
-  will-change: transform;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10000;
-} */
 
 /* ==================== */
 /* Seção de Projetos */
 /* ==================== */
 #projects {
-  padding: 80px 20px; /* Padding maior */
+  padding: 80px 20px;
   text-align: center;
   background-color: var(--projects-bg);
 }
 
 #projects #projects-main-title {
-  /* Usei ID para especificidade */
-  font-weight: 700; /* Poppins bold */
-  font-size: 2.5em; /* Tamanho maior */
-  margin-bottom: 60px; /* Espaço maior abaixo do título */
+  font-weight: 700;
+  font-size: 2.5em;
+  margin-bottom: 60px;
   color: var(--color-dark);
 }
 
 .projects-grid {
-  /* Container do grid */
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(300px, 1fr)
-  ); /* Grid responsivo */
-  gap: 30px; /* Espaço entre os cartões */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 60px auto; /* Centraliza o grid e adiciona espaço abaixo */
+  margin: 0 auto 60px auto;
 }
 
 .project-card {
-  /* O link que envolve o cartão */
-  text-decoration: none; /* Remove sublinhado do link */
-  display: block; /* Faz o link ocupar o espaço do cartão */
+  text-decoration: none;
+  display: block;
   background-color: var(--projects-card-bg);
   color: var(--color-light-medium);
   border-radius: 8px;
-  overflow: hidden; /* Garante que a imagem e conteúdo respeitem o border-radius */
-  box-shadow: var(--shadow-elevation-low); /* Sombra inicial sutil */
+  overflow: hidden;
+  box-shadow: var(--shadow-elevation-low);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-10px); /* Levanta o cartão no hover */
-  box-shadow: var(--shadow-elevation-medium); /* Aumenta a sombra no hover */
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 .project-content {
-  /* Div dentro do link/cartão */
   display: flex;
-  flex-direction: column; /* Conteúdo empilhado */
-  height: 100%; /* Ocupa a altura total do cartão */
+  flex-direction: column;
+  height: 100%;
 }
 
 .project-card img {
   width: 100%;
-  height: 200px; /* Altura fixa para as imagens */
-  object-fit: cover; /* Cobre a área sem distorcer */
-  border-bottom: 1px solid var(--color-darker); /* Separador */
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid var(--color-darker);
 }
 
 .project-info {
-  /* Div para título, descrição e tecnologias */
-  padding: 20px; /* Padding interno */
-  text-align: left; /* Alinha o texto à esquerda */
+  padding: 20px;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* Permite que a div cresça para preencher o espaço */
+  flex-grow: 1;
 }
 
 .project-title {
-  /* Título do projeto (h3) */
-  font-size: 1.5em; /* Tamanho ajustado */
-  font-weight: 600; /* Poppins semi-bold */
+  font-size: 1.5em;
+  font-weight: 600;
   margin-bottom: 10px;
-  color: var(--color-lightest); /* Cor clara sobre fundo escuro do card */
+  color: var(--color-lightest);
 }
 
 .project-description {
-  /* Descrição do projeto */
-  font-size: 1em; /* Tamanho padrão */
+  font-size: 1em;
   margin-bottom: 15px;
-  color: var(--color-light-dark); /* Cor neutra */
-  flex-grow: 1; /* Permite que a descrição ocupe o máximo de espaço antes das techs */
+  color: var(--color-light-dark);
+  flex-grow: 1;
 }
 
 .project-techs {
-  /* Container das tecnologias */
   display: flex;
-  flex-wrap: wrap; /* Quebra linha se necessário */
-  gap: 8px; /* Espaço entre as tecnologias */
-  margin-top: 10px; /* Espaço acima */
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .project-techs span {
-  background-color: var(--color-dark); /* Fundo escuro para as tags de tech */
-  color: var(--color-lightest); /* Texto claro */
-  font-size: 0.8em; /* Tamanho menor */
+  background-color: var(--color-dark);
+  color: var(--color-lightest);
+  font-size: 0.8em;
   padding: 4px 8px;
   border-radius: 4px;
-  font-weight: 500; /* Roboto medium */
+  font-weight: 500;
 }
 
-/* Aside de projetos (Link para repositórios) */
 .projects-aside {
   display: inline-flex;
   align-items: center;
@@ -510,183 +566,233 @@ h3 {
 }
 
 .projects-aside a {
-  display: flex; /* Usar flexbox para alinhar ícone e texto */
+  display: flex;
   align-items: center;
   text-decoration: none;
   color: var(--color-dark);
-  padding: 12px 25px; /* Padding ajustado */
+  padding: 12px 25px;
   border-radius: 8px;
   font-size: 1.1em;
   font-weight: 500;
 }
 
 .projects-aside a i {
-  font-size: 1.3em; /* Tamanho do ícone */
+  font-size: 1.3em;
   margin-right: 8px;
 }
+
 
 /* ==================== */
 /* Seção de Habilidades */
 /* ==================== */
 #skills {
-  padding: 80px 20px; /* Padding consistente */
-  background-color: var(--color-lightest); /* Fundo claro */
-  color: var(--color-dark); /* Texto escuro */
-  text-align: center; /* Centraliza o título principal */
+  padding: 80px 20px;
+  background-color: var(--color-lightest);
+  color: var(--color-dark);
+  text-align: center;
 }
 
 #skills .section-title {
-  color: var(--color-dark); /* Cor do título sobre fundo claro */
+  color: var(--color-dark);
+  margin-bottom: 40px;
 }
 
 .skills-container {
-  max-width: 1000px; /* Largura máxima um pouco maior para 4 colunas */
-  margin: 0 auto; /* Centraliza */
+  max-width: 1200px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(220px, 1fr)
-  ); /* Grid responsivo para potencialmente 4 colunas */
-  gap: 30px; /* Espaço entre categorias */
+  grid-template-columns: 1fr;
+  gap: 40px;
+  text-align: left;
 }
 
-.skill-category {
-  background-color: var(--color-light); /* Fundo leve para a categoria */
+.hard-skills h3,
+.soft-skills h3 {
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: var(--color-dark);
+  text-align: center;
+}
+
+.hard-skills-categories {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.hard-skills-frontend h4,
+.hard-skills-backend h4,
+.hard-skills-tools h4 {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--color-darker);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-lighter);
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 15px;
+  background-color: var(--color-light);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevation-low);
+}
+
+.skill-item i {
+  font-size: 2em;
+  color: var(--color-highlight);
+  flex-shrink: 0;
+}
+
+.skill-info {
+  flex-grow: 1;
+}
+
+.skill-name {
+  display: block;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--color-dark);
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: var(--color-light-medium);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: var(--color-secondary);
+  width: 0;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+.soft-skills {
+  background-color: var(--color-light);
   padding: 25px;
   border-radius: 8px;
-  text-align: left; /* Alinha texto dentro da categoria */
-  box-shadow: var(--shadow-elevation-low); /* Sombra */
-}
-
-.skill-category h3 {
-  font-size: 1.4em; /* Tamanho do título da categoria */
-  font-weight: 600; /* Poppins semi-bold */
-  margin-bottom: 15px;
-  color: var(--color-dark); /* Cor do título */
-  border-bottom: 1px solid var(--color-lighter); /* Separador */
-  padding-bottom: 10px;
-}
-
-.skill-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  box-shadow: var(--shadow-elevation-low);
   display: flex;
-  flex-direction: column; /* Itens da lista empilhados */
-  gap: 8px; /* Espaço entre os itens da lista */
+  flex-direction: column;
+  gap: 20px;
 }
 
-.skill-list li {
-  font-size: 1em;
-  color: var(--color-dark); /* Cor do texto da habilidade */
-  /* Opcional: adicionar um marcador visual */
-  /* position: relative;
-    padding-left: 15px; */
+.soft-skill-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
 }
 
-/* .skill-list li::before {
-    content: '•'; // Ponto ou outro ícone
-    position: absolute;
-    left: 0;
-    color: var(--color-highlight); // Cor do marcador
-    font-weight: bold;
-} */
+.soft-skill-item i {
+  font-size: 1.8em;
+  color: var(--color-tertiary);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.soft-skill-info h4 {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--color-darker);
+}
+
+.soft-skill-info p {
+  font-size: 0.95em;
+  color: var(--color-medium-dark);
+  line-height: 1.5;
+}
+
 
 /* ==================== */
 /* Seção de Contato */
 /* ==================== */
 #contact {
-  padding: 80px 20px; /* Padding consistente */
+  padding: 80px 20px;
   background-color: var(--contact-bg);
   color: var(--contact-text);
-  text-align: center; /* Centraliza o conteúdo */
-  border-bottom: 20px solid var(--color-darkest); /* Borda inferior marcante */
+  text-align: center;
+  border-bottom: 20px solid var(--color-darkest);
 }
 
-#contact #contact-title {
-  /* Usei ID para especificidade */
-  font-size: 2.5em; /* Tamanho maior */
-  font-weight: 700; /* Poppins bold */
+#contact .section-title {
+  font-size: 2.5em;
+  font-weight: 700;
   margin-bottom: 20px;
-  color: var(--color-lightest); /* Cor clara sobre fundo escuro */
+  color: var(--color-lightest);
 }
 
 .contact-intro {
   font-size: 1.1em;
   color: var(--color-light-dark);
-  margin-bottom: 40px; /* Mais espaço abaixo do intro */
+  margin-bottom: 40px;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .contact-methods-container {
-  /* Container dos métodos de contato */
-  max-width: 800px; /* Largura máxima */
-  margin: 0 auto; /* Centraliza */
-  display: grid; /* Usar grid para layout */
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(280px, 1fr)
-  ); /* Grid responsivo, mínimo 280px por item */
-  gap: 20px; /* Espaço entre os itens */
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
-.contact-method-item {
-  /* Item individual do método de contato */
-  background-color: var(
-    --color-darker
-  ); /* Fundo levemente mais claro que o fundo da seção */
+.contact-methods-container .contact-item-link {
+  background-color: var(--color-darker);
   padding: 20px;
   border-radius: 8px;
-  display: flex; /* Alinha ícone e info lado a lado */
-  align-items: center; /* Alinha verticalmente */
-  gap: 15px; /* Espaço entre ícone e info */
-  text-align: left; /* Alinha texto interno à esquerda */
-  box-shadow: var(--shadow-elevation-low); /* Sombra sutil */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  text-align: left;
+  box-shadow: var(--shadow-elevation-low);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
 }
 
-.contact-method-item:hover {
-  transform: translateY(-5px); /* Levanta um pouco no hover */
-  box-shadow: var(--shadow-elevation-medium); /* Aumenta a sombra */
+.contact-methods-container .contact-item-link:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-elevation-medium);
 }
 
-.contact-method-item i {
-  /* Ícone do método de contato */
-  font-size: 2em; /* Tamanho do ícone */
-  color: var(--color-highlight); /* Cor de destaque para o ícone */
-  /* Opcional: fundo circular para o ícone */
-  /* background-color: var(--color-darkest);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center; */
+.contact-item-link i {
+  font-size: 2em;
+  color: var(--color-highlight);
+  flex-shrink: 0;
 }
 
-.method-info h3 {
-  /* Título do método (ex: Email) */
+.contact-item-link .method-info {
+  flex-grow: 1;
+}
+
+.contact-item-link .method-info h3 {
   font-size: 1.1em;
-  font-weight: 600; /* Poppins semi-bold */
+  font-weight: 600;
   margin-bottom: 5px;
-  color: var(--color-lightest); /* Cor clara */
+  color: var(--color-lightest);
 }
 
-.method-link {
-  /* O link real de contato */
+.contact-item-link .method-info p {
   font-size: 1em;
-  color: var(--color-light-medium); /* Cor do link */
-  text-decoration: none; /* Remove sublinhado */
-  transition: color 0.3s ease;
-  word-break: break-word; /* Evita quebra de texto longo como emails */
+  color: var(--color-light-medium);
+  word-break: break-word;
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
 }
 
-.method-link:hover {
-  color: var(--color-lightest); /* Muda cor no hover */
-  text-decoration: underline; /* Adiciona sublinhado no hover (opcional) */
-}
 
 /* ==================== */
 /* Rodapé */
@@ -701,290 +807,433 @@ footer {
 
 footer p {
   margin-bottom: 8px;
-  color: inherit; /* Herda a cor do footer */
+  color: inherit;
 }
 
 footer p:last-child {
   margin-bottom: 0;
 }
 
+
 /* ==================== */
 /* Responsividade */
 /* ==================== */
-@media (max-width: 768px) {
-  /* Ajustes gerais para telas menores */
-  body {
-    padding-top: 50px; /* Ajusta padding top se a navbar for menor */
-  }
 
-  #navbar {
-    height: 50px; /* Navbar um pouco menor */
-  }
+/* Media Query: Desktop (min-width para estilos base de desktop) */
+@media (min-width: 769px) {
+    /* Navbar Desktop */
+    .nav-menu,
+    .navbar-social {
+        display: flex;
+    }
 
-  .navbar-container {
-    padding: 0 15px;
-  }
+    .hamburger-menu,
+    .sub-navigation {
+        display: none;
+    }
 
-  .logo img {
-    height: 40px; /* Logo um pouco menor */
-  }
+    #navbar {
+        height: 60px;
+    }
 
-  .logo-text {
-    font-size: 1.1em; /* Texto do logo menor */
-  }
+    body {
+        padding-top: 60px;
+    }
 
-  .nav-menu {
-    gap: 15px; /* Espaço menor entre links na navbar */
-  }
+    .sub-navigation.open {
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+    }
 
-  .nav-menu .nav-link {
-    font-size: 0.9rem; /* Texto da navbar menor */
-    padding: 6px 0;
-  }
+    /* Habilidades Desktop */
+    .skills-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 60px;
+    }
 
-  .nav-menu .nav-link i {
-    font-size: 1.1em; /* Ícones da navbar menores */
-    margin-right: 3px;
-  }
+    .hard-skills {
+        flex-grow: 1;
+    }
 
-  .navbar-social {
-    gap: 10px; /* Espaço menor entre ícones sociais */
-  }
+    .soft-skills {
+        flex-shrink: 0;
+        max-width: 450px;
+        margin: 0 auto;
+    }
 
-  .navbar-social .nav-link {
-    font-size: 1.2rem; /* Ícones sociais menores */
-  }
+    .hard-skills-categories {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
 
-  /* Welcome Section */
-  #welcome-section .main-title {
-    font-size: 2.5em; /* Título principal menor */
-  }
+    .hard-skills h3 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 30px;
+    }
 
-  #welcome-section .sub-content {
-    font-size: 1.2em; /* Subtítulo menor */
-  }
-
-  /* Ajustar tamanho e posição dos shapes se mantiver */
-  .shapes .shape-1 {
-    width: 400px;
-    height: 400px;
-    top: -100px;
-    left: -100px;
-  }
-  .shapes .shape-2 {
-    width: 300px;
-    height: 300px;
-    top: 50px;
-    right: -50px;
-  }
-  .shapes .shape-3 {
-    width: 180px;
-    height: 180px;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  /* Seções Gerais */
-  #projects,
-  #skills,
-  #contact {
-    padding: 60px 15px; /* Padding reduzido */
-  }
-
-  .section-title {
-    font-size: 2em; /* Títulos de seção menores */
-    margin-bottom: 1em;
-  }
-
-  /* Projetos */
-  .projects-grid {
-    gap: 20px; /* Espaço menor entre cartões */
-    margin-bottom: 40px;
-  }
-
-  .project-card img {
-    height: 180px; /* Altura da imagem ajustada */
-  }
-
-  .project-info {
-    padding: 15px; /* Padding interno do cartão reduzido */
-  }
-
-  .project-title {
-    font-size: 1.3em; /* Título do projeto menor */
-  }
-
-  .project-description {
-    font-size: 0.9em; /* Descrição menor */
-  }
-
-  .project-techs span {
-    font-size: 0.75em; /* Tags de tecnologia menores */
-    padding: 3px 6px;
-  }
-
-  .projects-aside a {
-    padding: 10px 20px; /* Padding do link aside ajustado */
-    font-size: 1em;
-  }
-  .projects-aside a i {
-    font-size: 1.2em;
-  }
-
-  /* Habilidades */
-  .skills-container {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(200px, 1fr)
-    ); /* Colunas menores para skills */
-    gap: 20px;
-  }
-
-  .skill-category {
-    padding: 20px;
-  }
-
-  .skill-category h3 {
-    font-size: 1.2em; /* Título da categoria menor */
-    margin-bottom: 10px;
-    padding-bottom: 8px;
-  }
-
-  .skill-list li {
-    font-size: 0.9em; /* Texto da skill menor */
-    gap: 6px;
-  }
-
-  /* Contato */
-  #contact .section-title {
-    color: var(--color-lightest); /* Garante cor clara no fundo escuro */
-  }
-
-  .contact-intro {
-    font-size: 1em;
-    margin-bottom: 20px;
-  }
-
-  .contact-methods-container {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(250px, 1fr)
-    ); /* Ajusta colunas para o novo layout */
-    gap: 15px; /* Espaço menor entre itens */
-  }
-
-  .contact-method-item {
-    padding: 15px;
-    gap: 10px;
-  }
-
-  .contact-method-item i {
-    font-size: 1.8em; /* Ícone menor */
-  }
-
-  .method-info h3 {
-    font-size: 1em; /* Título menor */
-  }
-
-  .method-link {
-    font-size: 0.9em; /* Link menor */
-  }
-
-  /* Rodapé */
-  footer {
-    padding: 20px 15px;
-    font-size: 0.8em;
-  }
+    .soft-skills h3 {
+        text-align: center;
+    }
 }
 
+
+/* Media Query: Tablets e Telas Menores (max-width para ajustes) */
+@media (max-width: 768px) {
+    /* Gerais */
+    body {
+      padding-top: 50px;
+    }
+
+    /* Navbar Mobile */
+    #navbar {
+      height: 50px;
+    }
+
+    .navbar-container {
+      padding: 0 15px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo-text {
+      font-size: 1.1em;
+    }
+
+    .nav-menu,
+    .navbar-social {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: flex;
+        font-size: 1.6em;
+    }
+
+    .sub-navigation {
+        top: 50px;
+    }
+
+    .nav-menu.open,
+    .navbar-social.open {
+        display: none;
+    }
+
+    /* Welcome Section */
+    #welcome-section .main-title {
+      font-size: 2.5em;
+    }
+
+    #welcome-section .sub-content {
+      font-size: 1.2em;
+    }
+
+    .shapes .shape-1 {
+      width: 400px;
+      height: 400px;
+      top: -100px;
+      left: -100px;
+    }
+    .shapes .shape-2 {
+      width: 300px;
+      height: 300px;
+      top: 50px;
+      right: -50px;
+    }
+    .shapes .shape-3 {
+      width: 180px;
+      height: 180px;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Seções Gerais */
+    #projects,
+    #skills,
+    #contact {
+      padding: 60px 15px;
+    }
+
+    .section-title {
+      font-size: 2em;
+      margin-bottom: 1em;
+    }
+
+    /* Projetos */
+    .projects-grid {
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .project-card img {
+      height: 180px;
+    }
+
+    .project-info {
+      padding: 15px;
+    }
+
+    .project-title {
+      font-size: 1.3em;
+    }
+
+    .project-description {
+      font-size: 0.9em;
+    }
+
+    .project-techs span {
+      font-size: 0.75em;
+      padding: 3px 6px;
+    }
+
+    .projects-aside a {
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+    .projects-aside a i {
+      font-size: 1.2em;
+    }
+
+    /* Habilidades */
+    .skills-container {
+      gap: 30px;
+    }
+    .hard-skills h3,
+    .soft-skills h3 {
+        font-size: 1.6em;
+        margin-bottom: 20px;
+    }
+    .hard-skills-frontend h4,
+    .hard-skills-backend h4,
+    .hard-skills-tools h4 {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+    .skill-item {
+        padding: 12px;
+        gap: 10px;
+    }
+    .skill-item i {
+        font-size: 1.8em;
+    }
+    .skill-name {
+        font-size: 0.95em;
+    }
+    .progress-bar {
+        height: 8px;
+    }
+    .soft-skills {
+        padding: 20px;
+        gap: 15px;
+    }
+    .soft-skill-item i {
+        font-size: 1.6em;
+    }
+    .soft-skill-info h4 {
+        font-size: 1em;
+    }
+    .soft-skill-info p {
+        font-size: 0.9em;
+    }
+
+
+    /* Contato */
+    #contact .section-title {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .contact-intro {
+      font-size: 1em;
+      margin-bottom: 30px;
+    }
+
+    .contact-methods-container {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .contact-methods-container .contact-item-link {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .contact-item-link i {
+        font-size: 1.8em;
+    }
+    .contact-item-link .method-info h3 {
+        font-size: 1em;
+    }
+    .contact-item-link .method-info p {
+        font-size: 0.9em;
+    }
+
+    /* Rodapé */
+    footer {
+      padding: 20px 15px;
+      font-size: 0.8em;
+    }
+}
+
+
+/* Media Query: Smartphones (max-width para ajustes menores) */
 @media (max-width: 480px) {
-  /* Ajustes adicionais para telas muito pequenas (celulares) */
-  #welcome-section .main-title {
-    font-size: 2em;
-  }
+    /* Gerais */
+    .section-title {
+      font-size: 1.8em;
+    }
 
-  #welcome-section .sub-content {
-    font-size: 1em;
-  }
+    /* Navbar Mobile */
+    .hamburger-menu {
+        font-size: 1.5em;
+    }
+    .sub-navigation .sub-nav-logo-link img {
+        height: 30px;
+    }
+    .sub-navigation .sub-nav-logo-link span {
+        font-size: 1.1em;
+    }
+    .sub-navigation a {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+    .sub-navigation a i {
+        font-size: 1.1em;
+    }
+    .sub-navigation .sub-nav-social-links {
+        gap: 10px;
+        padding: 10px 15px;
+    }
+    .sub-navigation .sub-nav-social-links a {
+        font-size: 1.3em;
+    }
 
-  .section-title {
-    font-size: 1.8em;
-  }
 
-  /* Projetos */
-  .projects-grid {
-    grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
-    gap: 15px;
-  }
+    /* Welcome Section */
+    #welcome-section .main-title {
+      font-size: 2em;
+    }
 
-  .project-card img {
-    height: 160px; /* Altura da imagem ajustada */
-  }
+    #welcome-section .sub-content {
+      font-size: 1em;
+    }
 
-  .project-info {
-    padding: 10px;
-  }
+    /* Projetos */
+    .projects-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
 
-  .project-title {
-    font-size: 1.2em;
-  }
+    .project-card img {
+      height: 160px;
+    }
 
-  .project-description {
-    font-size: 0.85em;
-  }
+    .project-info {
+      padding: 10px;
+    }
 
-  .project-techs span {
-    font-size: 0.7em;
-    padding: 2px 5px;
-  }
+    .project-title {
+      font-size: 1.2em;
+    }
 
-  /* Habilidades */
-  .skills-container {
-    grid-template-columns: 1fr; /* Uma coluna para categorias de skills */
-    gap: 15px;
-  }
+    .project-description {
+      font-size: 0.85em;
+    }
 
-  .skill-category {
-    padding: 15px;
-  }
+    .project-techs span {
+      font-size: 0.7em;
+      padding: 2px 5px;
+    }
 
-  .skill-category h3 {
-    font-size: 1.1em;
-    margin-bottom: 8px;
-    padding-bottom: 6px;
-  }
+    /* Habilidades */
+    #skills {
+        padding: 50px 15px;
+    }
+    #skills .section-title {
+        font-size: 1.8em;
+        margin-bottom: 30px;
+    }
+    .hard-skills h3,
+    .soft-skills h3 {
+        font-size: 1.4em;
+        margin-bottom: 15px;
+    }
+    .hard-skills-frontend h4,
+    .hard-skills-backend h4,
+    .hard-skills-tools h4 {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    .skill-item {
+        padding: 10px;
+        gap: 8px;
+    }
+    .skill-item i {
+        font-size: 1.6em;
+    }
+    .skill-name {
+        font-size: 0.9em;
+    }
+    .progress-bar {
+        height: 7px;
+    }
+    .soft-skills {
+        padding: 15px;
+        gap: 10px;
+    }
+    .soft-skill-item i {
+        font-size: 1.4em;
+    }
+    .soft-skill-info h4 {
+        font-size: 0.95em;
+    }
+    .soft-skill-info p {
+        font-size: 0.85em;
+    }
 
-  .skill-list li {
-    font-size: 0.85em;
-    gap: 5px;
-  }
 
-  /* Contato */
-  .contact-methods-container {
-    grid-template-columns: 1fr; /* Uma coluna para métodos de contato */
-    gap: 10px;
-  }
+    /* Contato */
+    #contact {
+        padding: 50px 15px;
+    }
 
-  .contact-method-item {
-    padding: 10px;
-    gap: 10px;
-  }
+    #contact .section-title {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
 
-  .contact-method-item i {
-    font-size: 1.6em;
-  }
+    .contact-intro {
+        font-size: 0.95em;
+        margin-bottom: 25px;
+    }
 
-  .method-info h3 {
-    font-size: 1em;
-  }
+    .contact-methods-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 
-  .method-link {
-    font-size: 0.9em;
-  }
+    .contact-methods-container .contact-item-link {
+        padding: 10px;
+        gap: 10px;
+    }
 
-  /* Rodapé */
-  footer {
-    font-size: 0.7em;
-  }
+    .contact-item-link i {
+        font-size: 1.6em;
+    }
+    .contact-item-link .method-info h3 {
+        font-size: 0.95em;
+    }
+    .contact-item-link .method-info p {
+        font-size: 0.85em;
+    }
+
+
+    /* Rodapé */
+    footer {
+      font-size: 0.7em;
+    }
 }
