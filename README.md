@@ -4,16 +4,6 @@ Este é o código fonte do meu portfólio online. Um site simples e estático, d
 
 Veja o site publicado: [tyxiel.github.io/Portifolio/](https://tyxiel.github.io/Portifolio/)
 
-## Tecnologias Utilizadas
-
-O projeto foi construído com as seguintes tecnologias principais e bibliotecas:
-
-* **Desenvolvimento Web:** HTML5, CSS3, JavaScript, React, Next.js
-* **Estilização e UI:** Bootstrap, Tailwind CSS, CSS Personalizado
-* **Back-end e Dados:** C#, .NET 6.0 (MVC), Python, C++, SQL Server, APIs (REST, ViaCEP)
-* **Ferramentas e Outros:** Git, GitHub, VS Code, DataTables, Selenium IDE, Pacote Office, Tinkercad, Heflo, Cloud (GCP)
-* **Ícones e Fontes:** Boxicons, Font Awesome, Google Fonts
-
 ## Contato
 
 Conecte-se comigo:
@@ -33,16 +23,6 @@ Este projeto está licenciado sob a GNU Affero General Public License v3.0. Veja
 This is the source code for my online portfolio. A simple and static website, developed to showcase my skills, projects, and certificates. Project and certificate content is loaded dynamically via JavaScript.
 
 View the published site: [tyxiel.github.io/Portifolio/](https://tyxiel.github.io/Portifolio/)
-
-## Technologies Used
-
-The project was built using the following main technologies and libraries:
-
-* **Web Development:** HTML5, CSS3, JavaScript, React, Next.js
-* **Styling and UI:** Bootstrap, Tailwind CSS, Custom CSS
-* **Backend and Data:** C#, .NET 6.0 (MVC), Python, C++, SQL Server, APIs (REST, ViaCEP)
-* **Tools and Others:** Git, GitHub, VS Code, DataTables, Selenium IDE, Pacote Office, Tinkercad, Heflo, Cloud (GCP)
-* **Icons and Fonts:** Boxicons, Font Awesome, Google Fonts
 
 ## Contact
 
