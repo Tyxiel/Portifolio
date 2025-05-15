@@ -190,25 +190,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     // PROJETOS EXISTENTES:
     {
-      title: "Tarefa CRUD",
-      description:
-        "Projeto CRUD (Create, Read, Update, Delete) em arquitetura MVC, desenvolvido com .NET 6.0 (C#) e banco de dados SQL Server. Utiliza DataTables para exibição e Bootstrap para estilização.",
-      imageUrl:
-        "https://i.ibb.co/SDHWy9HF/Captura-de-tela-2025-05-14-171334.png",
-      altText: "Captura de tela do projeto Tarefa CRUD",
-      projectUrl: "https://github.com/Tyxiel/TarefaCRUD",
-      techs: ["C#", ".NET 6.0", "MVC", "SQL Server", "DataTables", "Bootstrap"],
-    },
-    {
-      title: "App de Clima Simples",
-      description:
-        "Um aplicativo web que busca e exibe as condições atuais do clima para uma cidade digitada pelo usuário, utilizando uma API de clima pública.",
-      imageUrl: "https://i.ibb.co/Qn5cWvc/image.png",
-      altText: "Captura de tela do App de Clima Simples",
-      projectUrl: "https://tyxiel.github.io/Simple-Weather-App/",
-      techs: ["HTML5", "CSS3", "JavaScript", "API REST"],
-    },
-    {
       title: "Monsters Antique",
       description:
         "Este é um projeto de desenvolvimento web de uma loja online fictícia, a Ordem dos Guardiões da Noite. Desenvolvido com HTML5, CSS3 e JavaScript no front-end, e SQL Server e API local no back-end, suportando postagens e login funcional.",
@@ -228,13 +209,32 @@ document.addEventListener("DOMContentLoaded", () => {
       ],
     },
     {
-      title: "App de Clima Antigo",
+      title: "Tarefa CRUD",
+      description:
+        "Projeto CRUD (Create, Read, Update, Delete) em arquitetura MVC, desenvolvido com .NET 6.0 (C#) e banco de dados SQL Server. Utiliza DataTables para exibição e Bootstrap para estilização.",
+      imageUrl:
+        "https://i.ibb.co/SDHWy9HF/Captura-de-tela-2025-05-14-171334.png",
+      altText: "Captura de tela do projeto Tarefa CRUD",
+      projectUrl: "https://github.com/Tyxiel/TarefaCRUD",
+      techs: ["C#", ".NET 6.0", "MVC", "SQL Server", "DataTables", "Bootstrap"],
+    },
+    {
+      title: "App de Clima",
       description:
         "Versão anterior de um app de clima, explorando diferentes abordagens de design e funcionalidades.",
       imageUrl: "https://i.ibb.co/k93dWR9/image.png",
       altText: "Captura de tela do App de Clima Antigo",
       projectUrl: "https://gabrielbehling.github.io/Weather-App/",
       techs: ["HTML", "CSS", "JavaScript", "APIs"],
+    },
+    {
+      title: "Outro App de Clima Simples",
+      description:
+        "Um aplicativo web que busca e exibe as condições atuais do clima para uma cidade digitada pelo usuário, utilizando uma API de clima pública.",
+      imageUrl: "https://i.ibb.co/Qn5cWvc/image.png",
+      altText: "Captura de tela do App de Clima Simples",
+      projectUrl: "https://tyxiel.github.io/Simple-Weather-App/",
+      techs: ["HTML5", "CSS3", "JavaScript", "API REST"],
     },
     {
       title: "Buscador de CEP",
