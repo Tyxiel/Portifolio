@@ -28,8 +28,6 @@ Este projeto está licenciado sob a GNU Affero General Public License v3.0. Veja
 
 ---
 
----
-
 # My Personal Portfolio ✨ (EN)
 
 This is the source code for my online portfolio. A simple and static website, developed to showcase my skills, projects, and certificates. Project and certificate content is loaded dynamically via JavaScript.
