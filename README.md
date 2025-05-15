@@ -4,7 +4,7 @@ Bem-vindo ao código fonte do meu portfólio online! Este projeto foi desenvolvi
 
 O site é uma Single Page Application (SPA) estática, construída primariamente com tecnologias web fundamentais, com conteúdo dinâmico carregado via JavaScript para flexibilidade na gestão de projetos e certificados.
 
-Acesse a versão publicada aqui: [Link para o seu GitHub Pages ou domínio personalizado]
+Acesse a versão publicada aqui: tyxiel.github.io/Portifolio/
 
 ## Tecnologias Utilizadas
 
@@ -117,7 +117,7 @@ Você pode encontrar minhas informações de contato na seção "Fale Comigo" (C
 
 * **LinkedIn:** [https://linkedin.com/in/tyxiel](https://linkedin.com/in/tyxiel)
 * **GitHub:** [https://github.com/tyxiel](https://github.com/tyxiel)
-* **Email:** `tyxiel@duck.com` (Substitua pelo seu email real)
+* **Email:** `tyxiel@duck.com`
 
 ## Licença
 
@@ -133,7 +133,7 @@ Welcome to the source code of my personal online portfolio! This project was dev
 
 The website is a static Single Page Application (SPA), built primarily with fundamental web technologies, featuring dynamic content loading via JavaScript for flexibility in managing projects and certificates.
 
-Access the published version here: [Link to your GitHub Pages or custom domain]
+Access the published version here: tyxiel.github.io/Portifolio/
 
 ## Technologies Used
 
@@ -246,7 +246,7 @@ You can find my contact information in the "Fale Comigo" (Contact Me) section of
 
 * **LinkedIn:** [https://linkedin.com/in/tyxiel](https://linkedin.com/in/tyxiel)
 * **GitHub:** [https://github.com/tyxiel](https://github.com/tyxiel)
-* **Email:** `tyxiel@duck.com` (Replace with your actual email)
+* **Email:** `tyxiel@duck.com`
 
 ## License
 
