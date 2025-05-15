@@ -2,134 +2,134 @@
 document.addEventListener("DOMContentLoaded", () => {
   // --- Dados dos Certificados ---
   const certificatesData = [
+    // ... (seus dados de certificados permanecem os mesmos) ...
     {
       title: "Git - Repositório de código",
       issuer: "Vivae",
-      date: "Emitido em: Dez 2024",
-      type: "image",
+      date: "Emitido em: Dez 2024", // ATENÇÃO: Esta data parece ser futura.
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQEM5XZ0HMGyEA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733748501463?e=1747854000&v=beta&t=GMjyaKClk5mjnjRxNzKWret4OaUd9uRX6w5umIxFQ28",
       imageUrlThumbnail:
         "https://media.licdn.com/dms/image/v2/D562DAQEM5XZ0HMGyEA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733748501463?e=1747854000&v=beta&t=GMjyaKClk5mjnjRxNzKWret4OaUd9uRX6w5umIxFQ28",
       altText: "Miniatura do certificado: Git - Repositório de código",
       verificationLink: null,
+      credentialUrl: null,
       extraInfo: [],
     },
     {
       title: "Metodologias Ágeis",
       issuer: "Vivae",
-      date: "Emitido em: Dez 2024",
-      type: "image",
+      date: "Emitido em: Dez 2024", // ATENÇÃO: Esta data parece ser futura.
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQE8ew8fb5MsEg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734189870479?e=1747854000&v=beta&t=oO0lkUmyUvyzUQ0ukq93zVebZIQzZJmJrfYyWKLKZYM",
       imageUrlThumbnail:
         "https://media.licdn.com/dms/image/v2/D562DAQE8ew8fb5MsEg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734189870479?e=1747854000&v=beta&t=oO0lkUmyUvyzUQ0ukq93zVebZIQzZJmJrfYyWKLKZYM",
       altText: "Miniatura do certificado: Metodologias Ágeis",
       verificationLink: null,
+      credentialUrl: null,
       extraInfo: [],
     },
     {
       title: "Design UI e UX",
       issuer: "Serviço Nacional de Aprendizagem Industrial",
-      date: "Emitido em: Set 2024",
-      type: "image",
+      date: "Emitido em: Set 2024", // ATENÇÃO: Esta data parece ser futura.
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQHGTsCGBhumuQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729618148142?e=1747854000&v=beta&t=CS6g3FKqVVTeuJ67RUh4bJm3xSbn9iz4iWIBKhELuA0",
       imageUrlThumbnail:
         "https://media.licdn.com/dms/image/v2/D562DAQHGTsCGBhumuQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729618148142?e=1747854000&v=beta&t=CS6g3FKqVVTeuJ67RUh4bJm3xSbn9iz4iWIBKhELuA0",
       altText: "Miniatura do certificado: Design UI e UX",
       verificationLink: null,
+      credentialUrl: null,
       extraInfo: [],
     },
-    // Certificado "Medalha de Ouro OBG" removido
     {
       title: "Responsive Web Design",
       issuer: "freeCodeCamp",
-      date: "Emitido em: Set 2024",
-      type: "credential",
+      date: "Emitido em: Set 2024", // ATENÇÃO: Esta data parece ser futura.
+      imageUrlFull:
+        "https://i.ibb.co/Xrtckgbt/Captura-de-tela-2025-05-15-071254.png",
+      imageUrlThumbnail:
+        "https://i.ibb.co/Xrtckgbt/Captura-de-tela-2025-05-15-071254.png",
+      altText: "Miniatura do certificado: Responsive Web Design (freeCodeCamp)",
       credentialUrl:
         "https://www.freecodecamp.org/certification/Tyxiel/responsive-web-design",
-      logoUrl:
-        "https://design-style-guide.freecodecamp.org/img/fcc_primary_small.svg",
-      logoAltText: "Logo freeCodeCamp",
-      iconClass: null,
-      linkText: "Exibir credencial",
-      descriptionPlaceholder:
-        "Certificado do freeCodeCamp atestando proficiência em HTML5 e CSS3 para desenvolvimento web responsivo, focando em design mobile-first e layouts flexíveis.",
+      verificationLink: null,
       extraInfo: [],
     },
     {
       title: "Google Cloud Computing Foundations Certificate",
       issuer: "Google",
-      date: "Emitido em: Jun 2024",
-      type: "credential",
+      date: "Emitido em: Jun 2024", // ATENÇÃO: Esta data parece ser futura.
+      imageUrlFull:
+        "https://i.ibb.co/QwTPJT1/Captura-de-tela-2025-05-15-073027.png",
+      imageUrlThumbnail:
+        "https://i.ibb.co/QwTPJT1/Captura-de-tela-2025-05-15-073027.png",
+      altText:
+        "Miniatura do certificado: Google Cloud Computing Foundations (Google)",
       credentialUrl:
         "https://www.credly.com/badges/3c57c8c7-6045-47b8-9d1e-63df42b0a4f2/linked_in_profile",
-      logoUrl: null,
-      logoAltText: null,
-      iconClass: "bx bxl-google-cloud",
-      linkText: "Exibir credencial",
-      descriptionPlaceholder:
-        "Certificado Google Cloud Foundations cobrindo conceitos essenciais de computação em nuvem no Google Cloud Platform (GCP), incluindo infraestrutura, dados e machine learning.",
+      verificationLink: null,
       extraInfo: [],
     },
     {
       title: "Prototipagem de Maquetes Físicas e Digitais para Projetos",
       issuer: "Serviço Nacional de Aprendizagem Industrial",
       date: "Emitido em: Ago 2023",
-      type: "image",
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQEW2_QOvd-xBQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729617642304?e=1747854000&v=beta&t=Zz3P6MX7Zj25DY34_9BYoVn1Ehjy3O6ZwgsVW_2aQ9M",
       imageUrlThumbnail:
         "https://media.licdn.com/dms/image/v2/D562DAQEW2_QOvd-xBQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729617642304?e=1747854000&v=beta&t=Zz3P6MX7Zj25DY34_9BYoVn1Ehjy3O6ZwgsVW_2aQ9M",
       altText: "Miniatura do certificado: Prototipagem",
       verificationLink: null,
+      credentialUrl: null,
       extraInfo: [],
     },
   ];
 
-  // --- Função para Gerar o HTML de um Item de Certificado ---
+  // --- Função para Gerar o HTML de um Item de Certificado (Estrutura Unificada) ---
   function createCertificateHtml(cert) {
     let itemHtml = `
-            <div class="certificate-item">
-                <h4>${cert.title}</h4>
-                <p class="certificate-issuer">${cert.issuer}</p>
-                <p class="certificate-date">${cert.date}</p>
-        `;
+      <div class="certificate-item">
+          <h4>${cert.title}</h4>
+          <p class="certificate-issuer">${cert.issuer}</p>
+          <p class="certificate-date">${cert.date}</p>
+    `;
 
-    if (cert.type === "image") {
+    if (
+      cert.imageUrlFull &&
+      cert.imageUrlThumbnail &&
+      cert.altText !== undefined
+    ) {
       itemHtml += `
-                <a href="${cert.imageUrlFull}" class="certificate-thumbnail-link">
-                    <img src="${cert.imageUrlThumbnail}" alt="${cert.altText}" class="certificate-image" loading="lazy">
-                </a>
-            `;
-    } else if (cert.type === "credential") {
-      if (cert.descriptionPlaceholder) {
-        itemHtml += `
-                      <p class="certificate-description-placeholder">${cert.descriptionPlaceholder}</p>
-                  `;
-      }
-      itemHtml += `
-                <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="certificate-credential-item-link">
-            `;
-      if (cert.logoUrl) {
-        itemHtml += `<img src="${cert.logoUrl}" alt="${cert.logoAltText}" class="certificate-issuer-logo" loading="lazy">`;
-      } else if (cert.iconClass) {
-        itemHtml += `<i class='${cert.iconClass}'></i>`;
-      }
-      itemHtml += `
-                    <span>${cert.linkText}</span>
-                    <i class='bx bx-link-external'></i>
-                </a>
-            `;
+            <a href="${cert.imageUrlFull}" class="certificate-thumbnail-link">
+                <img src="${cert.imageUrlThumbnail}" alt="${cert.altText}" class="certificate-image" loading="lazy">
+            </a>
+        `;
+    } else {
+      console.error("Dados de imagem ausentes para certificado:", cert.title);
+      itemHtml += `<p>Imagem do certificado não disponível.</p>`;
+    }
+
+    let linksHtml = "";
+
+    if (cert.credentialUrl) {
+      linksHtml += `
+          <a href="${cert.credentialUrl}" target="_blank" rel="noopener noreferrer" class="certificate-credential-button">
+              <i class='bx bx-link-external'></i> Acessar Credencial
+          </a>
+        `;
     }
 
     if (cert.verificationLink) {
-      itemHtml += `
-                 <div class="certificate-links">
-                     <a href="${cert.verificationLink}" target="_blank" rel="noopener noreferrer" class="certificate-link">Ver Certificado <i class='bx bx-link-external'></i></a>
-                 </div>
-             `;
+      linksHtml += `
+            <a href="${cert.verificationLink}" target="_blank" rel="noopener noreferrer" class="certificate-verification-link">
+                <i class='bx bx-link-external'></i> Ver Certificado
+            </a>
+        `;
+    }
+
+    if (linksHtml) {
+      itemHtml += `<div class="certificate-links">${linksHtml}</div>`;
     }
 
     if (cert.extraInfo && cert.extraInfo.length > 0) {
@@ -139,31 +139,62 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     itemHtml += `</div>`;
-
     return itemHtml;
   }
 
-  // --- Renderização dos Certificados na Página ---
   const certificatesGrid = document.querySelector(".certificates-grid");
 
   if (certificatesGrid) {
     let allCertificatesHtml = "";
-
     certificatesData.forEach((cert) => {
       allCertificatesHtml += createCertificateHtml(cert);
     });
-
     certificatesGrid.innerHTML = allCertificatesHtml;
   }
 
   const projectsData = [
+    // NOVOS PROJETOS ADICIONADOS AQUI:
     {
-      // Projeto: Tarefa CRUD - URL da imagem atualizada
+      title: "Quentinhas do Grau",
+      description:
+        "Um website simples que simula uma loja virtual de alimentos (quentinhas), implementando funcionalidades como carrinho de compras e emissão de nota fiscal (simulada). Foco na experiência do usuário e design responsivo.",
+      imageUrl:
+        "https://i.ibb.co/tPYzg4Cx/Captura-de-tela-2025-05-15-081658.png",
+      altText: "Captura de tela do projeto Quentinhas do Grau",
+      projectUrl: "https://tyxiel.github.io/Quentinhas-do-Grau/",
+      techs: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "HTML Semântico",
+        "Design Responsivo",
+      ],
+    },
+    {
+      title: "Estufa Automática",
+      description:
+        "Projeto de uma estufa automatizada com conexão Wi-Fi, utilizando Arduino (MEGA 2560) e ESP32 para controle e monitoramento. O sistema gerencia temperatura (LM35), umidade (DHT11), luminosidade (LDR), e aciona componentes como ventoinha, LEDs, bombas d'água (via relés) e um servo motor, com interação via display LCD e botão.",
+      imageUrl: "https://via.placeholder.com/400x250.png?text=Imagem+Pendente", // Imagem placeholder
+      altText: "Imagem do projeto Estufa Automática (pendente)",
+      projectUrl: "#", // Defina a URL do projeto aqui quando disponível
+      techs: [
+        "Arduino (C/C++)",
+        "ESP32",
+        "Sensores (DHT11, LDR, LM35)",
+        "Atuadores (Servo, Relés)",
+        "Display LCD",
+        "Comunicação Wi-Fi",
+        "Eletrônica Embarcada",
+        "Prototipagem",
+      ],
+    },
+    // PROJETOS EXISTENTES:
+    {
       title: "Tarefa CRUD",
       description:
         "Projeto CRUD (Create, Read, Update, Delete) em arquitetura MVC, desenvolvido com .NET 6.0 (C#) e banco de dados SQL Server. Utiliza DataTables para exibição e Bootstrap para estilização.",
       imageUrl:
-        "https://i.ibb.co/SDHWy9HF/Captura-de-tela-2025-05-14-171334.png", // <-- URL REAL DA IMAGEM ADICIONADA
+        "https://i.ibb.co/SDHWy9HF/Captura-de-tela-2025-05-14-171334.png",
       altText: "Captura de tela do projeto Tarefa CRUD",
       projectUrl: "https://github.com/Tyxiel/TarefaCRUD",
       techs: ["C#", ".NET 6.0", "MVC", "SQL Server", "DataTables", "Bootstrap"],
@@ -178,14 +209,13 @@ document.addEventListener("DOMContentLoaded", () => {
       techs: ["HTML5", "CSS3", "JavaScript", "API REST"],
     },
     {
-      // Projeto: Monsters Antique (Loja Monstro) - URL da imagem e link atualizados
       title: "Monsters Antique",
       description:
         "Este é um projeto de desenvolvimento web de uma loja online fictícia, a Ordem dos Guardiões da Noite. Desenvolvido com HTML5, CSS3 e JavaScript no front-end, e SQL Server e API local no back-end, suportando postagens e login funcional.",
       imageUrl:
-        "https://i.ibb.co/HfYDCQKD/Captura-de-tela-2025-05-14-171011.png", // <-- URL REAL DA IMAGEM ADICIONADA
-      altText: "Captura de tela do projeto Monsters Antique (Loja Monstro)", // Alt text atualizado
-      projectUrl: "https://github.com/gabrielBehling/LojaMonstro", // <-- URL REAL DO PROJETO ADICIONADA
+        "https://i.ibb.co/HfYDCQKD/Captura-de-tela-2025-05-14-171011.png",
+      altText: "Captura de tela do projeto Monsters Antique (Loja Monstro)",
+      projectUrl: "https://github.com/gabrielBehling/LojaMonstro",
       techs: [
         "HTML5",
         "CSS3",
@@ -281,23 +311,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (projectsGrid) {
     let allProjectsHtml = "";
-
     projectsData.forEach((project) => {
       allProjectsHtml += createProjectHtml(project);
     });
-
     projectsGrid.innerHTML = allProjectsHtml;
-  } // --- Script para atualizar o link ativo da navegação na rolagem ---
+  }
 
+  // --- Script para atualizar o link ativo da navegação na rolagem ---
   const sections = document.querySelectorAll(
     "#welcome-section, #projects, #skills, #certificates, #contact"
   );
-
   const navLinks = document.querySelectorAll(".nav-menu .nav-link");
   const subNavLinks = document.querySelectorAll(
     ".sub-navigation .sub-nav-link, .sub-navigation .sub-nav-logo-link"
   );
-
   const navbar = document.getElementById("navbar");
   let navbarHeight = navbar ? navbar.offsetHeight : 60;
 
@@ -309,7 +336,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (section) {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-
         if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
           currentSectionId = section.id;
         }
@@ -342,28 +368,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const targetId = linkHref.substring(1);
         if (targetId === currentSectionId) {
           link.classList.add("active");
+        } else {
+          link.classList.remove("active");
         }
       }
     });
   }
 
   window.addEventListener("scroll", updateActiveLink);
-  updateActiveLink(); // --- Fim do Script de rolagem ---
+  updateActiveLink();
 
   // --- Script para Menu Hambúrguer Mobile ---
   const hamburgerButton = document.querySelector(".hamburger-menu");
   const subNavigation = document.querySelector(".sub-navigation");
-  const subNavLinksElements = document.querySelectorAll(".sub-navigation a"); // Corrigido para selecionar todos os links a
+  const subNavLinksElements = document.querySelectorAll(".sub-navigation a");
   const hamburgerIcon = hamburgerButton
     ? hamburgerButton.querySelector("i")
     : null;
-  // navbarHeight já definido acima
 
   function toggleMobileMenu() {
     if (subNavigation && hamburgerButton) {
       subNavigation.classList.toggle("open");
       hamburgerButton.classList.toggle("open");
-
       if (hamburgerIcon) {
         if (subNavigation.classList.contains("open")) {
           hamburgerIcon.classList.remove("bx-menu");
@@ -383,33 +409,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (subNavLinksElements.length > 0) {
-    // Usar o novo nome da variável
     subNavLinksElements.forEach((link) => {
       const linkHref = link.getAttribute("href");
       if (linkHref && linkHref.startsWith("#")) {
         link.addEventListener("click", function (e) {
           e.preventDefault();
-
           const targetId = this.getAttribute("href");
           const targetElement = document.querySelector(targetId);
-
           if (targetElement) {
             const elementPosition =
               targetElement.getBoundingClientRect().top + window.scrollY;
             const offsetPosition = elementPosition - navbarHeight;
-
             window.scrollTo({
               top: offsetPosition,
               behavior: "smooth",
             });
-
             setTimeout(toggleMobileMenu, 300);
           } else {
             toggleMobileMenu();
           }
         });
       } else {
-        link.addEventListener("click", toggleMobileMenu);
+        link.addEventListener("click", () => {
+          if (subNavigation && subNavigation.classList.contains("open")) {
+            // Não fecha o menu imediatamente se for um link externo para permitir que o navegador o abra
+            // Apenas garante que o overflow do body seja resetado se o menu estivesse aberto
+            // toggleMobileMenu(); // Removido para links externos, eles devem abrir em nova aba
+          }
+        });
       }
     });
   }
@@ -428,14 +455,13 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // --- Fim do Script de Menu Hambúrguer Mobile ---
-
   // --- Script para animar barras de progresso ao entrar na tela ---
   const skillsSection = document.getElementById("skills");
   const progressBars = document.querySelectorAll(".progress-bar-fill");
 
   if (skillsSection && progressBars.length > 0) {
-    const animateProgressBars = (entries) => {
+    const animateProgressBars = (entries, observerInstance) => {
+      // Adicionado observerInstance
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           progressBars.forEach((bar) => {
@@ -444,11 +470,11 @@ document.addEventListener("DOMContentLoaded", () => {
               bar.style.width = level;
             }
           });
-          // observer.unobserve(entry.target); // Descomente se quiser que anime apenas uma vez
+          // observerInstance.unobserve(entry.target); // Descomente se quiser que anime apenas uma vez
         } else {
           // Opcional: Resetar animação ao sair da tela
           // progressBars.forEach(bar => {
-          //     bar.style.width = '0%';
+          //     bar.style.width = '0%';
           // });
         }
       });
@@ -459,18 +485,14 @@ document.addEventListener("DOMContentLoaded", () => {
       rootMargin: "0px",
       threshold: 0.1,
     });
-
     observer.observe(skillsSection);
   }
-
-  // --- Fim do Script de animação das barras ---
 
   // --- Script para Modal/Lightbox de Certificados (com Delegação de Eventos) ---
   const modal = document.getElementById("certificate-modal");
   const modalOverlay = modal ? modal.querySelector(".modal-overlay") : null;
   const modalImage = document.getElementById("modal-image");
   const modalCloseButton = modal ? modal.querySelector(".modal-close") : null;
-  // certificatesGrid já selecionado anteriormente
 
   function openModal(imageUrl, altText) {
     if (modal && modalImage) {
@@ -485,7 +507,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (modal && modalImage) {
       modal.classList.remove("open");
       document.body.classList.remove("modal-open");
-      // setTimeout(() => { modalImage.src = ""; modalImage.alt = ""; }, 300); // Opcional: Limpar imagem após fechar
+      // setTimeout(() => { modalImage.src = ""; modalImage.alt = ""; }, 300); // Opcional
     }
   }
 
@@ -495,8 +517,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (thumbnailLink) {
         e.preventDefault();
         const imageUrl = thumbnailLink.getAttribute("href");
-        const altText = thumbnailLink.querySelector("img")
-          ? thumbnailLink.querySelector("img").getAttribute("alt")
+        const imgElement = thumbnailLink.querySelector("img");
+        const altText = imgElement
+          ? imgElement.getAttribute("alt")
           : "Certificado";
         if (imageUrl) {
           openModal(imageUrl, altText);
@@ -508,21 +531,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (modalCloseButton) {
     modalCloseButton.addEventListener("click", closeModal);
   }
-
   if (modalOverlay) {
     modalOverlay.addEventListener("click", closeModal);
   }
-
   document.addEventListener("keydown", function (e) {
     if (e.key === "Escape" && modal && modal.classList.contains("open")) {
       closeModal();
     }
-  }); // --- Script para atualizar o ano no rodapé ---
+  });
 
-  // --- Fim do Script de Modal/Lightbox ---
-
+  // --- Script para atualizar o ano no rodapé ---
   const currentYearSpan = document.getElementById("current-year");
   if (currentYearSpan) {
     currentYearSpan.textContent = new Date().getFullYear();
-  } // --- Fim do Script do rodapé ---
+  }
 }); // Fim do DOMContentLoaded listener
