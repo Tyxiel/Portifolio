@@ -546,3 +546,38 @@ document.addEventListener("DOMContentLoaded", () => {
     currentYearSpan.textContent = new Date().getFullYear();
   }
 }); // Fim do DOMContentLoaded listener
+
+// --- Script para Movimento das Formas, Título e Subtítulo ---
+
+document.body.addEventListener("mousemove", (evt) => {
+  const mouseX = evt.clientX;
+  const mouseY = evt.clientY;
+
+  // Move as formas com maior intensidade e um atraso (stagger)
+  gsap.to(".shape", {
+    x: (mouseX - window.innerWidth / 2) * 0.15,
+    y: (mouseY - window.innerHeight / 2) * 0.15, 
+    stagger: -0.02,
+    duration: 0.8,
+    ease: "power2.out",
+  });
+
+  // Move o título e o subtítulo com menor intensidade (efeito de paralaxe)
+  gsap.to("#welcome-section .main-title, #welcome-section .sub-content", {
+    x: (mouseX - window.innerWidth / 2) * 0.08,
+    y: (mouseY - window.innerHeight / 2) * 0.08,
+    duration: 0.8,
+    ease: "power2.out",
+  });
+});
+
+// Retorna as formas, título e subtítulo para a posição original quando o mouse sair
+document.body.addEventListener("mouseleave", () => {
+  gsap.to(".shape, #welcome-section .main-title, #welcome-section .sub-content", {
+    x: 0,
+    y: 0,
+    stagger: 0.05,
+    duration: 0.5,
+    ease: "power2.out",
+  });
+});
