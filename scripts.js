@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Git - Repositório de código",
       issuer: "Vivae",
-      date: "Emitido em: Dez 2024", // ATENÇÃO: Esta data parece ser futura.
+      date: "Emitido em: Dez 2024",
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQEM5XZ0HMGyEA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733748501463?e=1747854000&v=beta&t=GMjyaKClk5mjnjRxNzKWret4OaUd9uRX6w5umIxFQ28",
       imageUrlThumbnail:
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Metodologias Ágeis",
       issuer: "Vivae",
-      date: "Emitido em: Dez 2024", // ATENÇÃO: Esta data parece ser futura.
+      date: "Emitido em: Dez 2024",
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQE8ew8fb5MsEg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734189870479?e=1747854000&v=beta&t=oO0lkUmyUvyzUQ0ukq93zVebZIQzZJmJrfYyWKLKZYM",
       imageUrlThumbnail:
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Design UI e UX",
       issuer: "Serviço Nacional de Aprendizagem Industrial",
-      date: "Emitido em: Set 2024", // ATENÇÃO: Esta data parece ser futura.
+      date: "Emitido em: Set 2024",
       imageUrlFull:
         "https://media.licdn.com/dms/image/v2/D562DAQHGTsCGBhumuQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729618148142?e=1747854000&v=beta&t=CS6g3FKqVVTeuJ67RUh4bJm3xSbn9iz4iWIBKhELuA0",
       imageUrlThumbnail:
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Responsive Web Design",
       issuer: "freeCodeCamp",
-      date: "Emitido em: Set 2024", // ATENÇÃO: Esta data parece ser futura.
+      date: "Emitido em: Set 2024",
       imageUrlFull:
         "https://i.ibb.co/Xrtckgbt/Captura-de-tela-2025-05-15-071254.png",
       imageUrlThumbnail:
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       title: "Google Cloud Computing Foundations Certificate",
       issuer: "Google",
-      date: "Emitido em: Jun 2024", // ATENÇÃO: Esta data parece ser futura.
+      date: "Emitido em: Jun 2024",
       imageUrlFull:
         "https://i.ibb.co/QwTPJT1/Captura-de-tela-2025-05-15-073027.png",
       imageUrlThumbnail:
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "Projeto de uma estufa automatizada com conexão Wi-Fi, utilizando Arduino (MEGA 2560) e ESP32 para controle e monitoramento. O sistema gerencia temperatura (LM35), umidade (DHT11), luminosidade (LDR), e aciona componentes como ventoinha, LEDs, bombas d'água (via relés) e um servo motor, com interação via display LCD e botão.",
       imageUrl: "https://via.placeholder.com/400x250.png?text=Imagem+Pendente", // Imagem placeholder
       altText: "Imagem do projeto Estufa Automática (pendente)",
-      projectUrl: "#", // Defina a URL do projeto aqui quando disponível
+      projectUrl: "https://github.com/Tyxiel/auto-greenhouse",
       techs: [
         "Arduino (C/C++)",
         "ESP32",
