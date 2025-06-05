@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Estufa Automática",
       description:
         "Projeto de uma estufa automatizada com conexão Wi-Fi, utilizando Arduino (MEGA 2560) e ESP32 para controle e monitoramento. O sistema gerencia temperatura (LM35), umidade (DHT11), luminosidade (LDR), e aciona componentes como ventoinha, LEDs, bombas d'água (via relés) e um servo motor, com interação via display LCD e botão.",
-      imageUrl: "https://via.placeholder.com/400x250.png?text=Imagem+Pendente", // Imagem placeholder
+      imageUrl: "./img/estufa.jpg", // Imagem placeholder
       altText: "Imagem do projeto Estufa Automática (pendente)",
       projectUrl: "https://github.com/Tyxiel/auto-greenhouse",
       techs: [
