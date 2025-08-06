@@ -7,10 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Git - Repositório de código",
       issuer: "Vivae",
       date: "Emitido em: Dez 2024",
-      imageUrlFull:
-        "https://media.licdn.com/dms/image/v2/D562DAQEM5XZ0HMGyEA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733748501463?e=1747854000&v=beta&t=GMjyaKClk5mjnjRxNzKWret4OaUd9uRX6w5umIxFQ28",
-      imageUrlThumbnail:
-        "https://media.licdn.com/dms/image/v2/D562DAQEM5XZ0HMGyEA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1733748501463?e=1747854000&v=beta&t=GMjyaKClk5mjnjRxNzKWret4OaUd9uRX6w5umIxFQ28",
       altText: "Miniatura do certificado: Git - Repositório de código",
       verificationLink: null,
       credentialUrl: null,
@@ -20,11 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Metodologias Ágeis",
       issuer: "Vivae",
       date: "Emitido em: Dez 2024",
-      imageUrlFull:
-        "https://media.licdn.com/dms/image/v2/D562DAQE8ew8fb5MsEg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734189870479?e=1747854000&v=beta&t=oO0lkUmyUvyzUQ0ukq93zVebZIQzZJmJrfYyWKLKZYM",
-      imageUrlThumbnail:
-        "https://media.licdn.com/dms/image/v2/D562DAQE8ew8fb5MsEg/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1734189870479?e=1747854000&v=beta&t=oO0lkUmyUvyzUQ0ukq93zVebZIQzZJmJrfYyWKLKZYM",
-      altText: "Miniatura do certificado: Metodologias Ágeis",
       verificationLink: null,
       credentialUrl: null,
       extraInfo: [],
@@ -33,11 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Design UI e UX",
       issuer: "Serviço Nacional de Aprendizagem Industrial",
       date: "Emitido em: Set 2024",
-      imageUrlFull:
-        "https://media.licdn.com/dms/image/v2/D562DAQHGTsCGBhumuQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729618148142?e=1747854000&v=beta&t=CS6g3FKqVVTeuJ67RUh4bJm3xSbn9iz4iWIBKhELuA0",
-      imageUrlThumbnail:
-        "https://media.licdn.com/dms/image/v2/D562DAQHGTsCGBhumuQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729618148142?e=1747854000&v=beta&t=CS6g3FKqVVTeuJ67RUh4bJm3xSbn9iz4iWIBKhELuA0",
-      altText: "Miniatura do certificado: Design UI e UX",
       verificationLink: null,
       credentialUrl: null,
       extraInfo: [],
@@ -75,10 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       title: "Prototipagem de Maquetes Físicas e Digitais para Projetos",
       issuer: "Serviço Nacional de Aprendizagem Industrial",
       date: "Emitido em: Ago 2023",
-      imageUrlFull:
-        "https://media.licdn.com/dms/image/v2/D562DAQEW2_QOvd-xBQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729617642304?e=1747854000&v=beta&t=Zz3P6MX7Zj25DY34_9BYoVn1Ehjy3O6ZwgsVW_2aQ9M",
-      imageUrlThumbnail:
-        "https://media.licdn.com/dms/image/v2/D562DAQEW2_QOvd-xBQ/profile-treasury-image-shrink_1280_1280/profile-treasury-image-shrink_1280_1280/0/1729617642304?e=1747854000&v=beta&t=Zz3P6MX7Zj25DY34_9BYoVn1Ehjy3O6ZwgsVW_2aQ9M",
       altText: "Miniatura do certificado: Prototipagem",
       verificationLink: null,
       credentialUrl: null,
